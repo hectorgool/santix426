@@ -49,7 +49,7 @@ gem 'font-awesome-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem "rspec-rails", "~> 3.2.1"#santo
+  gem "rspec-rails", "~> 3.4.2"#santo
 end
 
 group :development do
