@@ -49,6 +49,7 @@ gem 'font-awesome-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "rspec-rails", "~> 3.2.1"#santo
 end
 
 group :development do
@@ -59,3 +60,8 @@ group :development do
   gem 'spring'
 end
 
+#santo
+#The ~> operator is called the approximate version constraint.
+group :test do
+  gem "capybara", "~> 2.4"
+end
