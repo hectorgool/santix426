@@ -1,0 +1,18 @@
+DROP DATABASE "santix426_development";
+CREATE DATABASE "santix426_development" WITH ENCODING 'UTF8';
+CREATE USER "santo" WITH PASSWORD 'asdfasdf';
+GRANT ALL ON DATABASE "santix426_development" TO santo;
+
+DROP DATABASE "santix426_test";
+CREATE DATABASE "santix426_test" WITH ENCODING 'UTF8';
+CREATE USER "santo" WITH PASSWORD 'asdfasdf';
+GRANT ALL ON DATABASE "santix426_test" TO santo;
+
+DROP DATABASE "santix426_production";
+CREATE DATABASE "santix426_production" WITH ENCODING 'UTF8';
+CREATE USER "santo" WITH PASSWORD 'asdfasdf';
+GRANT ALL ON DATABASE "santix426_production" TO santo;
+
+https://www.moncefbelyamani.com/rspec-and-capybara-how-to-fix-undefined-method-feature-for-main-object-nomethoderror/
+
+bundle exec rspec spec/features/signing_up_spec.rb
