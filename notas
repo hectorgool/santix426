@@ -16,3 +16,6 @@ GRANT ALL ON DATABASE "santix426_production" TO santo;
 https://www.moncefbelyamani.com/rspec-and-capybara-how-to-fix-undefined-method-feature-for-main-object-nomethoderror/
 
 bundle exec rspec spec/features/signing_up_spec.rb
+
+rails g controller projects index show new create edit update destroy
+
