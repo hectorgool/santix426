@@ -18,4 +18,63 @@ https://www.moncefbelyamani.com/rspec-and-capybara-how-to-fix-undefined-method-f
 bundle exec rspec spec/features/signing_up_spec.rb
 
 rails g controller projects index show new create edit update destroy
+Running via Spring preloader in process 16879
+      create  app/controllers/projects_controller.rb
+       route  get 'projects/destroy'
+       route  get 'projects/update'
+       route  get 'projects/edit'
+       route  get 'projects/create'
+       route  get 'projects/new'
+       route  get 'projects/show'
+       route  get 'projects/index'
+      invoke  erb
+      create    app/views/projects
+      create    app/views/projects/index.html.erb
+      create    app/views/projects/show.html.erb
+      create    app/views/projects/new.html.erb
+      create    app/views/projects/create.html.erb
+      create    app/views/projects/edit.html.erb
+      create    app/views/projects/update.html.erb
+      create    app/views/projects/destroy.html.erb
+      invoke  rspec
+      create    spec/controllers/projects_controller_spec.rb
+      create    spec/views/projects
+      create    spec/views/projects/index.html.erb_spec.rb
+      create    spec/views/projects/show.html.erb_spec.rb
+      create    spec/views/projects/new.html.erb_spec.rb
+      create    spec/views/projects/create.html.erb_spec.rb
+      create    spec/views/projects/edit.html.erb_spec.rb
+      create    spec/views/projects/update.html.erb_spec.rb
+      create    spec/views/projects/destroy.html.erb_spec.rb
+      invoke  helper
+      create    app/helpers/projects_helper.rb
+      invoke    rspec
+      create      spec/helpers/projects_helper_spec.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/projects.coffee
+      invoke    scss
+      create      app/assets/stylesheets/projects.scss
 
+
+  get 'projects/index'
+
+  get 'projects/show'
+
+  get 'projects/new'
+
+  get 'projects/create'
+
+  get 'projects/edit'
+
+  get 'projects/update'
+
+  get 'projects/destroy'
+
+
+rails g model project name:string description:string
+
+Stop any Rails server that’s currently running, and run these commands to start pre-
+paring to run a new one in production mode:
+$ bundle exec rake assets:precompile
+$ bundle exec rake db:migrate RAILS_ENV=production
