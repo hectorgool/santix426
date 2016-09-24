@@ -1,16 +1,9 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
 
-<div id="ticket">
-	<header>
-		<h1>
-			<%= @project.name %>
-		</h1>
-	</header>
+<div id="project">
 	<header>
 		<h2>
-			<%= @ticket.name %>
+			<%= @project.name %>
 		</h2>
 	</header>
-	<%= simple_format(@ticket.description) %>
+	<%= simple_format(@project.description) %>
 </div>
