@@ -17,62 +17,68 @@ https://www.moncefbelyamani.com/rspec-and-capybara-how-to-fix-undefined-method-f
 
 bundle exec rspec spec/features/signing_up_spec.rb
 
-rails g controller projects index show new create edit update destroy
+rails g controller tours index show new create edit update destroy
+rails d controller tours index show new create edit update destroy
+
+rails g controller tours index show new create edit update destroy
+rails d controller tours index show new create edit update destroy
+
 Running via Spring preloader in process 16879
-      create  app/controllers/projects_controller.rb
-       route  get 'projects/destroy'
-       route  get 'projects/update'
-       route  get 'projects/edit'
-       route  get 'projects/create'
-       route  get 'projects/new'
-       route  get 'projects/show'
-       route  get 'projects/index'
+      create  app/controllers/tours_controller.rb
+       route  get 'tours/destroy'
+       route  get 'tours/update'
+       route  get 'tours/edit'
+       route  get 'tours/create'
+       route  get 'tours/new'
+       route  get 'tours/show'
+       route  get 'tours/index'
       invoke  erb
-      create    app/views/projects
-      create    app/views/projects/index.html.erb
-      create    app/views/projects/show.html.erb
-      create    app/views/projects/new.html.erb
-      create    app/views/projects/create.html.erb
-      create    app/views/projects/edit.html.erb
-      create    app/views/projects/update.html.erb
-      create    app/views/projects/destroy.html.erb
+      create    app/views/tours
+      create    app/views/tours/index.html.erb
+      create    app/views/tours/show.html.erb
+      create    app/views/tours/new.html.erb
+      create    app/views/tours/create.html.erb
+      create    app/views/tours/edit.html.erb
+      create    app/views/tours/update.html.erb
+      create    app/views/tours/destroy.html.erb
       invoke  rspec
-      create    spec/controllers/projects_controller_spec.rb
-      create    spec/views/projects
-      create    spec/views/projects/index.html.erb_spec.rb
-      create    spec/views/projects/show.html.erb_spec.rb
-      create    spec/views/projects/new.html.erb_spec.rb
-      create    spec/views/projects/create.html.erb_spec.rb
-      create    spec/views/projects/edit.html.erb_spec.rb
-      create    spec/views/projects/update.html.erb_spec.rb
-      create    spec/views/projects/destroy.html.erb_spec.rb
+      create    spec/controllers/tours_controller_spec.rb
+      create    spec/views/tours
+      create    spec/views/tours/index.html.erb_spec.rb
+      create    spec/views/tours/show.html.erb_spec.rb
+      create    spec/views/tours/new.html.erb_spec.rb
+      create    spec/views/tours/create.html.erb_spec.rb
+      create    spec/views/tours/edit.html.erb_spec.rb
+      create    spec/views/tours/update.html.erb_spec.rb
+      create    spec/views/tours/destroy.html.erb_spec.rb
       invoke  helper
-      create    app/helpers/projects_helper.rb
+      create    app/helpers/tours_helper.rb
       invoke    rspec
-      create      spec/helpers/projects_helper_spec.rb
+      create      spec/helpers/tours_helper_spec.rb
       invoke  assets
       invoke    coffee
-      create      app/assets/javascripts/projects.coffee
+      create      app/assets/javascripts/tours.coffee
       invoke    scss
-      create      app/assets/stylesheets/projects.scss
+      create      app/assets/stylesheets/tours.scss
 
 
-  get 'projects/index'
+  get 'tours/index'
 
-  get 'projects/show'
+  get 'tours/show'
 
-  get 'projects/new'
+  get 'tours/new'
 
-  get 'projects/create'
+  get 'tours/create'
 
-  get 'projects/edit'
+  get 'tours/edit'
 
-  get 'projects/update'
+  get 'tours/update'
 
-  get 'projects/destroy'
+  get 'tours/destroy'
 
 
-rails g model project name:string description:string
+rails g model tour name:string description:string
+rails d model tour
 
 Stop any Rails server that’s currently running, and run these commands to start pre-
 paring to run a new one in production mode:

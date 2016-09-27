@@ -1,18 +1,18 @@
 require "rails_helper"
 
-RSpec.feature "Users can view projects" do
+RSpec.feature "Users can view tours" do
 
   let(:user) { FactoryGirl.create(:user) }
-  #let(:project) { FactoryGirl.create(:project, name: "Sublime Text 3") }
+  #let(:tour) { FactoryGirl.create(:tour, name: "Sublime Text 3") }
   
   before do
    login_as(user)
-   assign_role!(user, :viewer, project)
+   assign_role!(user, :viewer, tour)
   end
 
-  scenario "with the project details" do
+  scenario "with the tour details" do
     visit "/"
     click_link "Sublime Text 3"
-    expect(page.current_url).to eq project_url(project)
+    expect(page.current_url).to eq tour_url(tour)
   end
 end
