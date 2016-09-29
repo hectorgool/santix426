@@ -1,2 +1,11 @@
 <h1>Tours#show</h1>
 <p>Find me in app/views/tours/show.html.erb</p>
+
+<div id="tour">
+    <header>
+        <h2>
+            <%= @tour.name %>
+        </h2>
+    </header>
+    <%= simple_format(@tour.description) %>
+</div>
