@@ -48,14 +48,20 @@
         				</li>
 
 						<li>
-							<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+					        <%= link_to destroy_user_session_path, method: :delete do %>
+					        	 Log out <i class="glyphicon glyphicon-off"></i>
+					        <% end %>
 						</li>
 					<% else %>	
 						<li>
-							<%= link_to "Sign up", new_user_registration_path, method: :get %>
+							<%= link_to new_user_registration_path, method: :get do %>
+								Sign up 
+							<% end %>
 						</li>
 						<li>
-							<%= link_to "Sign in", new_user_session_path, method: :get %>
+							<%= link_to new_user_session_path, method: :get do %>
+								Sign in
+							<% end %>
 						</li>						
 					<% end %>
 				</ul>
@@ -72,9 +78,8 @@
 	    <p class="alert">
 	    	<%= alert %>
 	    </p>
-
 		<%= yield %>
 	</div>
-
+	<%= render "layouts/footer" %>  
 </body>
 </html>

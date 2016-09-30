@@ -1,15 +1,28 @@
 
+<% if user_signed_in? %>
+  
+  <div class="page-header">
+    <h1>
+      Tours
+      <%= link_to new_tour_url, :class => "btn btn-default btn-lg pull-right" do %>
+        <i class="glyphicon glyphicon-plus"></i>
+      <% end %>
+    </h1>
+  </div>
+
+<% end %>
+
 <%= render "social/search" %>
 
 <% @tours.in_groups_of(3, false).each do |group| %>
   <div class="row">
     <% group.each do |tour| %>
+     
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-       
         <div class="panel panel-default">
           <div class="panel-heading_santo">
             <a href="">
-              <%= image_tag '1.jpg', class: 'img-responsive', alt: '...' %>
+              <%= image_tag '1.jpg', class: 'img-responsive', alt: tour.name %>
             </a>
           </div>
           <div class="panel-body">
@@ -25,16 +38,19 @@
               </a>
             </p>
             <p class="text-left">
-              <!--<%= tour.name %>-->
-              <%= link_to tour.name, tour %>
+              <%= link_to tour.name, tour %> 
+               <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
             </p>
             <p class="text-left">
               <%= sanitize(tour.description) %>
             </p>
+            <span class="label label-info">Info 1</span>
+            <span class="label label-info">Info 2</span>
+            <span class="label label-info">Info 3</span>
           </div>
         </div>
- 
       </div>
+
     <% end %>
   </div>
 <% end %>
