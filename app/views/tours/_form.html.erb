@@ -2,8 +2,10 @@
 
   <%= f.input :name %>
 
-  <%= f.input :description %>
+  <label for="description">Description</label>
+
+  <%= f.text_area :description, label: 'Description', class: 'form-control input-lg', rows: '7' %><br />
 
   <%= f.button :submit, class: 'btn btn-black btn-lg btn-block' %>
-  
+
 <% end %>
