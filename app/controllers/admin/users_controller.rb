@@ -48,7 +48,7 @@ class Admin::UsersController < ApplicationController
     #@user = User.find(params[:id])
     @user.destroy
     flash[:notice] = "User has been deleted."
-    redirect_to users_path
+    redirect_to admin_users_path
   end
 
   private

@@ -1,6 +1,5 @@
 class ToursController < ApplicationController
 
-
   before_action :set_tour, only: [:show, :edit, :update, :destroy]
 
   def set_tour
@@ -46,7 +45,7 @@ class ToursController < ApplicationController
   end
 
   def destroy
-    #@tour = Tour.find(params[:id])
+    @tour = Tour.find(params[:id])
     @tour.destroy
     flash[:notice] = "Tour has been deleted."
     redirect_to tours_path

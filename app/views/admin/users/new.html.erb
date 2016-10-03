@@ -1,2 +1,15 @@
-<h1>Admin::Users#new</h1>
-<p>Find me in app/views/admin/users/new.html.erb</p>
+<% if user_signed_in? %>
+  	<div class="col-md-6 col-md-offset-3">
+  		<div class="page-header">
+		    <h2>
+		        Add User 
+		        <small>
+		        	<span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span>
+		        </small>
+		    </h2>
+	    </div>
+	    <%= render "form", user: @user %>
+  	</div>
+<% else %>
+
+<% end %>
