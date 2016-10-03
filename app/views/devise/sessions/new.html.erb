@@ -3,7 +3,9 @@
     <div class="panel panel-default">
       <div class="panel-body">
       
-        <h2>Log in</h2>
+        <div class="page-header">
+          <h1>Log in</h1>
+        </div>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -24,11 +26,19 @@
             <%= f.label :remember_me %>
           <% end -%>
 
+<<<<<<< HEAD
           <%= f.button :submit, "Log in", class: "btn btn-black btn-lg btn-block" %>
+=======
+          <%= f.button :submit, "Log in", class: "btn btn-blue btn-lg btn-block" %>
+>>>>>>> tours
 
         <% end %>
 
         <%= render "devise/shared/links" %>
+
+        <p class="lead text-center">OR</p>
+
+        <%= render "social/links" %>        
 
       </div>
     </div>

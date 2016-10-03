@@ -11,11 +11,20 @@ SimpleForm.setup do |config|
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
+<<<<<<< HEAD
     b.use :label, class: 'control-label'#santo
 
     b.use :input, class: 'form-control input-lg'
     #b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
     b.use :full_error, wrap_with: { tag: 'span', class: 'help-block' } #santo
+=======
+    b.use :label, class: 'control-label'
+
+    b.use :input, class: 'form-control input-lg'#santo
+    #b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+    b.use :full_error, wrap_with: { tag: 'span', class: 'help-block' }#santo
+
+>>>>>>> tours
     b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
   end
 

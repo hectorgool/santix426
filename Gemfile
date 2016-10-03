@@ -52,6 +52,12 @@ gem 'pundit', '~> 1.1'
 #santo
 gem 'simple_form'
 
+<<<<<<< HEAD
+=======
+#santo
+gem 'leaflet-rails', '~> 0.7.7'
+
+>>>>>>> tours
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

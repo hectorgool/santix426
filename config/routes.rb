@@ -1,13 +1,47 @@
 Rails.application.routes.draw do
-  get 'home/index'
+
+  namespace :admin do
+  get 'users/index'
+  end
+
+  namespace :admin do
+  get 'users/show'
+  end
+
+  namespace :admin do
+  get 'users/new'
+  end
+
+  namespace :admin do
+  get 'users/create'
+  end
+
+  namespace :admin do
+  get 'users/edit'
+  end
+
+  namespace :admin do
+  get 'users/update'
+  end
+
+  namespace :admin do
+  get 'users/destroy'
+  end
 
   devise_for :users
+ 
+  #santo
+  devise_scope :user do
+    get '/users' => 'devise/registrations#new'
+    get '/users/password' => 'devise/passwords#new'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'home#index'
+  root 'tours#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -57,7 +91,15 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  resources :projects
+  resources :tours
   
+  #santo
+  namespace :admin do
+    resources :users
+  end
+
+  namespace :admin do
+    root "users#index"
+  end
+
 end

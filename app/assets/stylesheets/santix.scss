@@ -2,8 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*
+//santo
 body { 
-	padding-top: 70px; 
+	background: #FCFCFC; 
+} 
+
+.navbar-default {
+    background-color: #FFFFFF;
 }
-*/
+
+.panel-heading > .panel-heading_santo {
+	background-color: #FFFFFF;
+    padding: 0px 0px;
+}
+
+.panel-body > .panel-body_image {
+	background-color: #FFFFFF;
+    padding: 0px 0px;
+}
+
+.footer { 
+	background-color: #242729; 
+}
+
+.panel-height {
+	height: 350px; 
+}
+
+#mymap { 
+	height: 300px; 
+}
