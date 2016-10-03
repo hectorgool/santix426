@@ -92,5 +92,14 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   resources :tours
+  
+  #santo
+  namespace :admin do
+    resources :users
+  end
+
+  namespace :admin do
+    root "users#index"
+  end
 
 end

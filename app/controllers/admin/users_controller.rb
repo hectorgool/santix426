@@ -11,21 +11,50 @@ class Admin::UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
+    @user = User.new
   end
 
   def create
+    @user = User.new(user_params)
+    if @user.save
+      flash[:notice] = "User has been created."
+      redirect_to @user
+    else
+      flash.now[:alert] = "User has not been created."
+      render "new"
+    end
   end
 
-  def edit
-  end
+  #def edit
+    #@user = User.find(params[:id])
+  #end
 
   def update
+    #@user = User.find(params[:id])
+    if @user.update(User_params)
+      flash[:notice] = "User has been updated."
+      redirect_to @user
+    else
+      flash.now[:alert] = "User has not been updated."
+      render "edit"
+    end
   end
 
   def destroy
+    #@user = User.find(params[:id])
+    @user.destroy
+    flash[:notice] = "User has been deleted."
+    redirect_to users_path
+  end
+
+  private
+
+  def user_params
+    params.require(:User).permit(:email, :password)
   end
 
 end
