@@ -16,3 +16,8 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require leaflet
+//= require fancybox
+
+jQuery(function() {
+  $("a.fancybox").fancybox();
+});

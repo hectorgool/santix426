@@ -96,9 +96,10 @@
 			<h2>
 				Images
 			</h2>
-  
-            <%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
-            
+
+			<a href="<%= image_path("1.jpg") %>" class="fancybox" rel="group">
+				<%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
+			</a>
 
 		</div>	
 	</div>
