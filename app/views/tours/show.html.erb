@@ -1,7 +1,5 @@
-
 <div class="col-md-6">
 	<div class="panel panel-default">
-
 		<div class="panel-body">
 
 			<h1>
@@ -45,21 +43,16 @@
 			<a href="#" id="morepics" type="button" class="btn btn-default btn-lg btn-block">
 				<span class="glyphicon glyphicon-picture" aria-hidden="true"></span> More Pics
 			</a>
-
 			<button id="askAQuestion" type="button" class="btn btn-default btn-lg btn-block">
 				<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ask a Question
 			</button>
-
 			<button id="addToCart" type="button" class="btn btn-default btn-lg btn-block">
 				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to cart
 			</button>
-
 		</div>
 
 		<div class="panel-footer">
-
 			<span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share: 
-	
 			<!--start:bootstrap social-->
 			<a class="btn btn-social-icon btn-lg btn-twitter">
 				<i class="fa fa-twitter"></i>
@@ -74,12 +67,9 @@
 				<i class="fa fa-google-plus"></i>
 			</a>				
 			<!--end:bootstrap social-->
-
 		</div>
-
 	</div>
 </div>
-
 
 <div class="col-md-6">
 	<div class="panel panel-default">
@@ -97,10 +87,8 @@
 				Images
 			</h2>
 
-			<a href="<%= image_path("1.jpg") %>" class="fancybox" rel="group">
-				<%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
-			</a>
-
+			<%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
+			
 		</div>	
 	</div>
 </div>	

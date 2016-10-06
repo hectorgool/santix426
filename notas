@@ -1,0 +1,13 @@
+
+rails g migration add_price_to_tours price:decimal
+
+rails d migration add_price_to_tours price:decimal
+
+
+  <%= 
+  	f.text_area :description, 
+  	label: 'Description', 
+  	class: 'form-control input-lg', 
+  	rows: '7',
+  	:input_html => {:minlength => 10 , maxlength: 25}  
+  %><br />
