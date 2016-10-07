@@ -1,6 +1,5 @@
-
 <div class="col-md-12">
-	<%= render "social/search" %>
+	<%= render "layouts/search" %>
 </div>
 
 <div class="col-md-6">
@@ -36,10 +35,10 @@
 				<dd>
 					<select class="form-control input-lg">
 						<option>1</option>
-					  	<option>2</option>
-					  	<option>3</option>
-					  	<option>4</option>
-					  	<option>5</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
 					</select>
 				</dd>
 
@@ -83,13 +82,13 @@
 			<%=
 			map(:container_id => "mymap",
 				:center => {
-			  	:latlng => [@tour.latitude, @tour.longitude],
-			  	:zoom => 16
+					:latlng => [@tour.latitude, @tour.longitude],
+					:zoom => 16
 				},
-  			:markers => [{
-       		:latlng => [@tour.latitude, @tour.longitude],
-       		:popup => @tour.description
-     		}]
+				:markers => [{
+					:latlng => [@tour.latitude, @tour.longitude],
+					:popup => @tour.description
+				}]
 			)
 			%>
 
