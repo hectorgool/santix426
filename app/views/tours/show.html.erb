@@ -1,3 +1,8 @@
+
+<div class="col-md-12">
+	<%= render "social/search" %>
+</div>
+
 <div class="col-md-6">
 	<div class="panel panel-default">
 		<div class="panel-body">
@@ -7,7 +12,7 @@
 			</h1>					
 
 			<h3>
-				$100 MXN
+				$<%= @tour.price %> MXN
 			</h3>
 
 			<dl>
@@ -77,10 +82,15 @@
 
 			<%=
 			map(:container_id => "mymap",
-				  :center => {
-			  :latlng => [51.505, -0.09],
-			  :zoom => 13
-			})
+				:center => {
+			  	:latlng => [@tour.latitude, @tour.longitude],
+			  	:zoom => 16
+				},
+  			:markers => [{
+       		:latlng => [@tour.latitude, @tour.longitude],
+       		:popup => @tour.description
+     		}]
+			)
 			%>
 
 			<h2>

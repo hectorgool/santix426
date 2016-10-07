@@ -59,6 +59,9 @@ gem 'leaflet-rails', '~> 0.7.7'
 #santo
 gem 'photoswipe-rails', '~> 4.1', '>= 4.1.1'
 
+#santo
+gem 'geocoder'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
