@@ -15,3 +15,9 @@ rails d migration add_price_to_tours price:decimal
 
 rails g migration add_latitude_at_to_tours latitude:float
 rails g migration add_longitude_at_to_tours longitude:float
+
+
+rails g migration add_firstname_at_to_users firstname:string
+rails g migration add_lastname_at_to_users lastname:string
+
+
