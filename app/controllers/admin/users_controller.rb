@@ -35,9 +35,9 @@ class Admin::UsersController < ApplicationController
 
   def update
     #@user = User.find(params[:id])
-    if @user.update(User_params)
+    if @user.update(user_params)
       flash[:notice] = "User has been updated."
-      redirect_to @user
+      redirect_to admin_users_url
     else
       flash.now[:alert] = "User has not been updated."
       render "edit"
@@ -54,7 +54,7 @@ class Admin::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:User).permit(:email, :password)
+    params.require(:user).permit(:firstname, :lastname)
   end
 
 end

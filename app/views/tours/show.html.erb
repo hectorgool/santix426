@@ -85,6 +85,10 @@
 	<div class="panel panel-default">
 		<div class="panel-body">
 
+			<%= render "layouts/carousel" %>
+
+			<br />			
+
 			<%=
 				map(:container_id => "mymap",
 					:center => {
@@ -93,15 +97,11 @@
 					},
 					:markers => [{
 						:latlng => [@tour.latitude, @tour.longitude],
-						:popup => @tour.description
+						:popup => @tour.name
 					}]
 				)
 			%>
 
-			<br />
-
-			<%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
-			
 		</div>	
 	</div>
 </div>	

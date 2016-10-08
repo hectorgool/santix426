@@ -20,4 +20,12 @@ rails g migration add_longitude_at_to_tours longitude:float
 rails g migration add_firstname_at_to_users firstname:string
 rails g migration add_lastname_at_to_users lastname:string
 
+			<!--
+			<%= 
+				#render "layouts/carousel" 
+			%>
+			-->
+
+			<%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
+			
 
