@@ -6,6 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-unless User.exists?(email: "hectorgool@gmail.com")
-  User.create!(email: "hectorgool@gmail.com", password: "asdfasdf")
+#santo, create admin user
+unless User.exists?(email: "santo@santo.com")
+	User.create!(firstname: "Rodolfo", lastname: "Guzman Huerta", email: "santo@santo.com", password: "asdfasdf", admin: true
+)
 end
+
+#santo. create user
+unless User.exists?(email: "hectorgool@gmail.com")
+  User.create!(firstname: "Hector", lastname: "Gonzalez Olmos", email: "hectorgool@gmail.com", password: "asdfasdf")
+end
+

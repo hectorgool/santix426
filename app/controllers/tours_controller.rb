@@ -1,37 +1,34 @@
 class ToursController < ApplicationController
 
-  before_action :set_tour, only: [:show, :edit, :update, :destroy]
-
-  def set_tour
-    @tour = Tour.find(params[:id])
-  end
+  #before_action :set_tour, only: [:show, :edit, :update, :destroy]
+  before_action :set_tour, only: [:show, :edit, :update]
 
   def index
     @tours = Tour.all
   end
 
-  #def show
+  def show
     #@tour = Tour.find(params[:id])
-  #end
-
-  def new
-    @tour = Tour.new
   end
 
-  def create
-    @tour = Tour.new(tour_params)
-    if @tour.save
-      flash[:notice] = "Tour has been created."
-      redirect_to @tour
-    else
-      flash.now[:alert] = "Tour has not been created."
-      render "new"
-    end
-  end
+  # def new
+  #   @tour = Tour.new
+  # end
 
-  #def edit
+  # def create
+  #   @tour = Tour.new(tour_params)
+  #   if @tour.save
+  #     flash[:notice] = "Tour has been created."
+  #     redirect_to @tour
+  #   else
+  #     flash.now[:alert] = "Tour has not been created."
+  #     render "new"
+  #   end
+  # end
+
+  def edit
     #@tour = Tour.find(params[:id])
-  #end
+  end
 
   def update
     #@tour = Tour.find(params[:id])
@@ -44,17 +41,28 @@ class ToursController < ApplicationController
     end
   end
 
-  def destroy
-    @tour = Tour.find(params[:id])
-    @tour.destroy
-    flash[:notice] = "Tour has been deleted."
-    redirect_to tours_path
-  end
+  # def destroy
+  #   @tour = Tour.find(params[:id])
+  #   @tour.destroy
+  #   flash[:notice] = "Tour has been deleted."
+  #   redirect_to tours_path
+  # end
 
   private
 
-  def tour_params
-    params.require(:tour).permit(:name, :description, :price, :latitude, :longitude)
-  end
+    #def set_tour
+      #@tour = Tour.find(params[:id])
+    #end
+
+    def set_tour
+      @tour = Tour.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The tour you were looking for could not be found."
+      redirect_to tours_path
+    end
+
+    def tour_params
+      params.require(:tour).permit(:name, :description, :price, :latitude, :longitude)
+    end
 
 end

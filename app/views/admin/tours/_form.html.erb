@@ -1,0 +1,22 @@
+<%= simple_form_for([:admin, @tour]) do |f| %>
+
+  <%= f.input :name %>
+
+  <label for="description">Description</label>
+
+  <%= f.input :description, 
+  	as: :text, 
+  	label: false,
+  	class: 'form-control input-lg', 
+  	rows: '100'
+  %>
+
+  <%= f.input :price %>
+
+  <%= f.input :latitude %>
+
+  <%= f.input :longitude %>
+
+  <%= f.button :submit, class: 'btn btn-black btn-lg btn-block' %>
+
+<% end %>

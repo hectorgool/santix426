@@ -1,32 +1,8 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-  get 'users/index'
-  end
-
-  namespace :admin do
-  get 'users/show'
-  end
-
-  namespace :admin do
-  get 'users/new'
-  end
-
-  namespace :admin do
-  get 'users/create'
-  end
-
-  namespace :admin do
-  get 'users/edit'
-  end
-
-  namespace :admin do
-  get 'users/update'
-  end
-
-  namespace :admin do
-  get 'users/destroy'
-  end
+  #namespace :admin do
+  #get 'application/index'
+  #end
 
   devise_for :users
  
@@ -91,15 +67,20 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :tours
+  #resources :tours
   
   #santo
   namespace :admin do
     resources :users
   end
 
+  #santo
+  resources :tours, only: [:index, :show, :edit, :update]
+
+  #santo
   namespace :admin do
-    root "users#index"
+    root "application#index"
+    resources :tours, only: [:new, :create, :destroy]
   end
 
 end

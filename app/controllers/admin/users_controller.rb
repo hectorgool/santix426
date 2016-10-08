@@ -1,4 +1,5 @@
-class Admin::UsersController < ApplicationController
+#class Admin::UsersController < ApplicationController
+class Admin::UsersController < Admin::ApplicationController
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -29,9 +30,9 @@ class Admin::UsersController < ApplicationController
     end
   end
 
-  #def edit
+  def edit
     #@user = User.find(params[:id])
-  #end
+  end
 
   def update
     #@user = User.find(params[:id])
@@ -53,8 +54,8 @@ class Admin::UsersController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:user).permit(:firstname, :lastname)
-  end
+    def user_params
+      params.require(:user).permit(:firstname, :lastname)
+    end
 
 end

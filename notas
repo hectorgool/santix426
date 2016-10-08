@@ -29,3 +29,30 @@ rails g migration add_lastname_at_to_users lastname:string
 			<%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
 			
 
+  namespace :admin do
+  get 'users/index'
+  end
+
+  namespace :admin do
+  get 'users/show'
+  end
+
+  namespace :admin do
+  get 'users/new'
+  end
+
+  namespace :admin do
+  get 'users/create'
+  end
+
+  namespace :admin do
+  get 'users/edit'
+  end
+
+  namespace :admin do
+  get 'users/update'
+  end
+
+  namespace :admin do
+  get 'users/destroy'
+  end

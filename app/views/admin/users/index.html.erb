@@ -2,7 +2,7 @@
 <div class="page-header">
 	<h1>
 		Admin <small>Users</small>
-		<%= link_to admin_users_new_url, :class => "btn btn-default btn-lg pull-right" do %>
+		<%= link_to new_admin_user_url, :class => "btn btn-default btn-lg pull-right" do %>
       <i class="glyphicon glyphicon-plus"></i>
     <% end %>
 	</h1>
@@ -26,6 +26,9 @@
       </td>
       <td>
         <strong>email</strong>
+      </td>
+      <td class="text-center">
+        <strong>admin</strong>
       </td>
       <td class="text-center">
         <strong>Ver</strong>
@@ -55,7 +58,10 @@
         <%= user.email %>
       </td>
       <td class="text-center">
-        <%= link_to admin_user_url(user), :class => "btn btn-info btn-lg" do %>
+        <%= user.admin ? "<span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>".html_safe : "" %>
+      </td>      
+      <td class="text-center">
+        <%= link_to admin_user_url(user.id), :class => "btn btn-info btn-lg" do %>
           <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
         <% end %>
       </td>
@@ -90,6 +96,9 @@
       </td>
       <td>
         <strong>email</strong>
+      </td>
+      <td class="text-center">
+        <strong>admin</strong>
       </td>
       <td class="text-center">
         <strong>Ver</strong>
