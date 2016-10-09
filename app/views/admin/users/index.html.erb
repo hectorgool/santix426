@@ -39,6 +39,9 @@
       <td class="text-center">
         <strong>Borrar</strong>
       </td>
+      <td class="text-center">
+        <strong>Archive</strong>
+      </td>
     </tr>
   </thead>
 
@@ -78,6 +81,14 @@
           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
         <% end %>
       </td>
+      <td class="text-center">
+        <%= link_to admin_user_url(user.id),
+          method: :patch,
+          data: { confirm: "Are you sure you want to archive this user?" },
+          class: "btn btn-warning btn-lg" do %>
+          <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+        <% end %>        
+      </td>      
     </tr>
     <% end %>
 
@@ -109,6 +120,9 @@
       <td class="text-center">
         <strong>Borrar</strong>
       </td>
+      <td class="text-center">
+        <strong>Archive</strong>
+      </td>      
     </tr>
   </tfoot>
 

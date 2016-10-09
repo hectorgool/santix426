@@ -71,16 +71,26 @@ Rails.application.routes.draw do
   
   #santo
   namespace :admin do
-    resources :users
+    
+    root "application#index"
+    #resources :users
+    resources :tours, only: [:new, :create, :edit, :update, :destroy]
+
+    resources :users do
+      member do
+        patch :archive
+      end
+    end
+    
   end
 
   #santo
   resources :tours, only: [:index, :show]
 
   #santo
-  namespace :admin do
-    root "application#index"
-    resources :tours, only: [:new, :create, :edit, :update, :destroy]
-  end
+  # namespace :admin do
+  #   root "application#index"
+  #   resources :tours, only: [:new, :create, :edit, :update, :destroy]
+  # end
 
 end

@@ -56,3 +56,7 @@ rails g migration add_lastname_at_to_users lastname:string
   namespace :admin do
   get 'users/destroy'
   end
+
+
+   rails g migration add_archived_at_to_users archived_at:timestamp
+
