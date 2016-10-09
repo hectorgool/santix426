@@ -44,7 +44,9 @@
           <div class="panel-body_image">
 
             <%= link_to tour do %>
-              <%= image_tag '2.jpg', class: 'img-responsive', alt: tour.name %>
+              <% if tour.attachment.present? %>
+                <%= image_tag tour.attachment, class: 'img-responsive', alt: tour.name %>
+              <% end %>
             <% end %>
 
           </div>

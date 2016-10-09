@@ -17,6 +17,13 @@
 
   <%= f.input :longitude %>
 
+  <div class="panel panel-default">
+    <div class="panel-body">
+    <%= f.input :attachment, as: :file, label: "File" %>
+    <%= f.input :attachment_cache, as: :hidden %>
+    </div>
+  </div>
+
   <%= f.button :submit, class: 'btn btn-black btn-lg btn-block' %>
 
 <% end %>

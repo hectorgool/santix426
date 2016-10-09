@@ -60,3 +60,4 @@ rails g migration add_lastname_at_to_users lastname:string
 
    rails g migration add_archived_at_to_users archived_at:timestamp
 
+              <%= image_tag '2.jpg', class: 'img-responsive', alt: tour.name %>

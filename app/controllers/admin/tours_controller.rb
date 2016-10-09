@@ -46,7 +46,7 @@ class Admin::ToursController < Admin::ApplicationController
     end 
   
 	  def tour_params
-	    params.require(:tour).permit(:name, :description, :price, :latitude, :longitude)
+	    params.require(:tour).permit(:name, :description, :price, :latitude, :longituden, :attachment, :attachment_cache)
 	  end
 
 end
