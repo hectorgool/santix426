@@ -75,12 +75,12 @@ Rails.application.routes.draw do
   end
 
   #santo
-  resources :tours, only: [:index, :show, :edit, :update]
+  resources :tours, only: [:index, :show]
 
   #santo
   namespace :admin do
     root "application#index"
-    resources :tours, only: [:new, :create, :destroy]
+    resources :tours, only: [:new, :create, :edit, :update, :destroy]
   end
 
 end
