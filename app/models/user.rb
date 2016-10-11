@@ -5,8 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
  
  	#santo
-  validates :firstname, presence: true
-  validates :lastname, presence: true
+  validates :firstname, presence: true, :on=>:create
+  validates :lastname, presence: true, :on=>:create
+
+  #validates :firstname, if: ->(obj) { obj.new_record? || !obj.firstname.blank? }
+  #validates :lastname, if: ->(obj) { obj.new_record? || !obj.lastname.blank? }
 
   #santo
 	def archive
