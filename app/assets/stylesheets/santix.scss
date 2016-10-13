@@ -26,9 +26,20 @@ body {
     padding: 0px 0px;
 }
 
+
 .footer { 
-	background-color: #242729; 
+	background-color: #242729;
+  color:#ACD45D;
+  height: 300px; 
 }
+
+/*
+.footer { 
+  background-color: #242729;
+  color:#E1D464;
+  height: 300px; 
+}
+*/
 
 .panel-height {
 	height: 300px; 
@@ -38,3 +49,7 @@ body {
 	height: 300px; 
 }
 
+
+footer-background-color{
+  background-color: #272B2D;
+}
