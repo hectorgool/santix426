@@ -69,10 +69,18 @@
             </p>
             <p class="text-left">
               <h3>
-                <%= link_to tour.name, tour %> 
-                <span class="glyphicon glyphicon-heart pull-right" aria-hidden="true"></span>
+                <%= link_to tour.name, tour %>
+                <span class="pull-right">
+                  10 <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </span>
               </h3>
             </p>
+            <h4>
+              <p class="text-left">
+                $<%= tour.price %> MNX
+                <span class="text-info pull-right">by @santo</span>
+              </p>
+            </h4>
             <p class="text-left">
               <%= sanitize(tour.description) %>
             </p>
