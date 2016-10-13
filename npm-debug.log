@@ -1,0 +1,167 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/node-v4.6.0-linux-x64/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'react-native-cli' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.0
+4 verbose install initial load of /opt/node-v4.6.0-linux-x64/lib/package.json
+5 verbose readDependencies loading dependencies from /opt/node-v4.6.0-linux-x64/lib/package.json
+6 silly cache add args [ 'react-native-cli', null ]
+7 verbose cache add spec react-native-cli
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'react-native-cli',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'react-native-cli',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed react-native-cli@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for react-native-cli
+11 info addNameTag [ 'react-native-cli', 'latest' ]
+12 silly mapToRegistry name react-native-cli
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'react-native-cli',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'react-native-cli',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/react-native-cli
+17 verbose addNameTag registry:https://registry.npmjs.org/react-native-cli not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/react-native-cli
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 10:05:34
+21 verbose request id 89d7d32921fcaa49
+22 verbose etag "41Y0JK5PFFUSX50YU9PLRVCY4"
+23 http request GET https://registry.npmjs.org/react-native-cli
+24 http 304 https://registry.npmjs.org/react-native-cli
+25 verbose headers { date: 'Wed, 12 Oct 2016 15:05:35 GMT',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   'cache-control': 'max-age=300',
+25 verbose headers   etag: '"41Y0JK5PFFUSX50YU9PLRVCY4"',
+25 verbose headers   age: '210',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-served-by': 'cache-dfw1820-DFW',
+25 verbose headers   'x-cache': 'HIT',
+25 verbose headers   'x-cache-hits': '1',
+25 verbose headers   'x-timer': 'S1476284735.818829,VS0,VE0',
+25 verbose headers   vary: 'Accept-Encoding' }
+26 silly get cb [ 304,
+26 silly get   { date: 'Wed, 12 Oct 2016 15:05:35 GMT',
+26 silly get     via: '1.1 varnish',
+26 silly get     'cache-control': 'max-age=300',
+26 silly get     etag: '"41Y0JK5PFFUSX50YU9PLRVCY4"',
+26 silly get     age: '210',
+26 silly get     connection: 'keep-alive',
+26 silly get     'x-served-by': 'cache-dfw1820-DFW',
+26 silly get     'x-cache': 'HIT',
+26 silly get     'x-cache-hits': '1',
+26 silly get     'x-timer': 'S1476284735.818829,VS0,VE0',
+26 silly get     vary: 'Accept-Encoding' } ]
+27 verbose etag https://registry.npmjs.org/react-native-cli from cache
+28 verbose get saving react-native-cli to /home/hector/.npm/registry.npmjs.org/react-native-cli/.cache.json
+29 verbose correctMkdir /home/hector/.npm correctMkdir not in flight; initializing
+30 silly addNameTag next cb for react-native-cli with tag latest
+31 silly addNamed react-native-cli@1.0.0
+32 verbose addNamed "1.0.0" is a plain semver version for react-native-cli
+33 silly cache afterAdd react-native-cli@1.0.0
+34 verbose afterAdd /home/hector/.npm/react-native-cli/1.0.0/package/package.json not in flight; writing
+35 verbose correctMkdir /home/hector/.npm correctMkdir not in flight; initializing
+36 verbose afterAdd /home/hector/.npm/react-native-cli/1.0.0/package/package.json written
+37 silly install resolved [ { name: 'react-native-cli',
+37 silly install resolved     version: '1.0.0',
+37 silly install resolved     license: 'BSD-3-Clause',
+37 silly install resolved     description: 'The React Native CLI tools',
+37 silly install resolved     main: 'index.js',
+37 silly install resolved     engines: { node: '>=4' },
+37 silly install resolved     repository:
+37 silly install resolved      { type: 'git',
+37 silly install resolved        url: 'git+https://github.com/facebook/react-native.git' },
+37 silly install resolved     scripts: { test: 'mocha' },
+37 silly install resolved     bin: { 'react-native': 'index.js' },
+37 silly install resolved     dependencies:
+37 silly install resolved      { chalk: '^1.1.1',
+37 silly install resolved        minimist: '^1.2.0',
+37 silly install resolved        prompt: '^0.2.14',
+37 silly install resolved        semver: '^5.0.3' },
+37 silly install resolved     bugs: { url: 'https://github.com/facebook/react-native/issues' },
+37 silly install resolved     homepage: 'https://github.com/facebook/react-native#readme',
+37 silly install resolved     _id: 'react-native-cli@1.0.0',
+37 silly install resolved     _shasum: '112d56c18b7324969d21282a240e3de8903aa963',
+37 silly install resolved     _from: 'react-native-cli@latest',
+37 silly install resolved     _npmVersion: '2.15.5',
+37 silly install resolved     _nodeVersion: '4.4.5',
+37 silly install resolved     _npmUser: { name: 'bestander', email: 'bestander@gmail.com' },
+37 silly install resolved     dist:
+37 silly install resolved      { shasum: '112d56c18b7324969d21282a240e3de8903aa963',
+37 silly install resolved        tarball: 'https://registry.npmjs.org/react-native-cli/-/react-native-cli-1.0.0.tgz' },
+37 silly install resolved     maintainers:
+37 silly install resolved      [ [Object],
+37 silly install resolved        [Object],
+37 silly install resolved        [Object],
+37 silly install resolved        [Object],
+37 silly install resolved        [Object],
+37 silly install resolved        [Object],
+37 silly install resolved        [Object] ],
+37 silly install resolved     _npmOperationalInternal:
+37 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+37 silly install resolved        tmp: 'tmp/react-native-cli-1.0.0.tgz_1464957130165_0.2410504559520632' },
+37 silly install resolved     directories: {},
+37 silly install resolved     _resolved: 'https://registry.npmjs.org/react-native-cli/-/react-native-cli-1.0.0.tgz',
+37 silly install resolved     readme: 'ERROR: No README data found!' } ]
+38 info install react-native-cli@1.0.0 into /opt/node-v4.6.0-linux-x64/lib
+39 info installOne react-native-cli@1.0.0
+40 verbose installOne of react-native-cli to /opt/node-v4.6.0-linux-x64/lib not in flight; installing
+41 verbose correctMkdir /home/hector/.npm/_locks correctMkdir not in flight; initializing
+42 verbose lock using /home/hector/.npm/_locks/react-native-cli-de202af73b703ccd.lock for /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+43 silly install write writing react-native-cli 1.0.0 to /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+44 verbose unbuild lib/node_modules/react-native-cli
+45 silly gentlyRm /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli is being purged from base /opt/node-v4.6.0-linux-x64
+46 verbose gentlyRm don't care about contents; nuking /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+47 verbose tar unpack /home/hector/.npm/react-native-cli/1.0.0/package.tgz
+48 verbose tar unpacking to /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+49 silly gentlyRm /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli is being purged
+50 verbose gentlyRm don't care about contents; nuking /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+51 silly gunzTarPerm modes [ '775', '664' ]
+52 error tar.unpack untar error /home/hector/.npm/react-native-cli/1.0.0/package.tgz
+53 verbose unlock done using /home/hector/.npm/_locks/react-native-cli-de202af73b703ccd.lock for /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+54 verbose fstream_path /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+55 verbose fstream_type Directory
+56 verbose fstream_class DirWriter
+57 verbose stack Error: EACCES: permission denied, mkdir '/opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli'
+57 verbose stack     at Error (native)
+58 verbose fstream_stack /opt/node-v4.6.0-linux-x64/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+58 verbose fstream_stack /opt/node-v4.6.0-linux-x64/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+58 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+59 verbose cwd /home/hector/src/rails/santix426
+60 error Linux 3.13.0-96-generic
+61 error argv "/opt/node-v4.6.0-linux-x64/bin/node" "/usr/local/bin/npm" "install" "-g" "react-native-cli"
+62 error node v4.6.0
+63 error npm  v2.15.9
+64 error path /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
+65 error code EACCES
+66 error errno -13
+67 error syscall mkdir
+68 error Error: EACCES: permission denied, mkdir '/opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli'
+68 error     at Error (native)
+68 error  { [Error: EACCES: permission denied, mkdir '/opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli']
+68 error   errno: -13,
+68 error   code: 'EACCES',
+68 error   syscall: 'mkdir',
+68 error   path: '/opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli',
+68 error   fstream_type: 'Directory',
+68 error   fstream_path: '/opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli',
+68 error   fstream_class: 'DirWriter',
+68 error   fstream_stack:
+68 error    [ '/opt/node-v4.6.0-linux-x64/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+68 error      '/opt/node-v4.6.0-linux-x64/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+68 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+69 error Please try running this command again as root/Administrator.
+70 verbose exit [ -13, true ]
+71 verbose unbuild lib/node_modules/react-native-cli
+72 silly gentlyRm /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli is being purged from base /opt/node-v4.6.0-linux-x64
+73 verbose gentlyRm don't care about contents; nuking /opt/node-v4.6.0-linux-x64/lib/node_modules/react-native-cli
