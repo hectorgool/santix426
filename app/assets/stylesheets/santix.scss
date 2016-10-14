@@ -13,17 +13,17 @@ body {
 } 
 
 .navbar-default {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .panel-heading > .panel-heading_santo {
 	background-color: #FFFFFF;
-    padding: 0px 0px;
+  padding: 0px 0px;
 }
 
 .panel-body > .panel-body_image {
 	background-color: #FFFFFF;
-    padding: 0px 0px;
+  padding: 0px 0px;
 }
 
 
@@ -31,6 +31,8 @@ body {
 	background-color: #242729;
   color:#ACD45D;
   height: 300px; 
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /*
@@ -52,4 +54,8 @@ body {
 
 footer-background-color{
   background-color: #272B2D;
+}
+
+.apps{
+  height: 50px;
 }
