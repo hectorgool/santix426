@@ -45,29 +45,40 @@
 			-->
 
 			<div class="panel panel-default">
-  				<div class="panel-body">
+  			<div class="panel-body">
 
-	  				<h2>
-	  					Reservations
-	  				</h2>
+  				<h2>
+  					Reservations
+  				</h2>
+
 					<div class="input-group input-group-lg">
-		  				<input type="text" class="form-control datepicker" placeholder="" aria-describedby="sizing-addon1">
-		  				<span class="input-group-addon" id="sizing-addon1">
-		  					<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-		  				</span>
+	  				<input type="text" class="form-control datepicker" placeholder="Select Date" aria-describedby="sizing-addon1">
+	  				<span class="input-group-addon" id="sizing-addon1">
+	  					<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+	  				</span>
 					</div>
 
-					<form>
-		  				<div class="form-group">
-							<select class="form-control input-lg">
-								<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-							</select>
-						</div>
-					</form>					
+          <div class="input-group input-group-lg date">
+            <input type='text' class="form-control" id="datetimepicker3" placeholder="Select Time" />
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-time"></span>
+            </span>
+          </div>
+
+					<div class="input-group input-group-lg date">
+						<input class="form-control input-lg" type="number" min="1" max="100" value="1">
+  					<span class="input-group-addon">
+              <span class="glyphicon glyphicon-user"></span> Please Select Number Of Persons
+            </span>
+          </div>
+
+					<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#askAQuestion">
+					  <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ask a Question
+					</button>
+
+					<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#addToCart">
+					  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to cart
+					</button>
 
 				</div>
 			</div>
@@ -156,3 +167,16 @@
 		</div>	
 	</div>
 </div>	
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.datepicker').datepicker();
+	});
+
+ $(function () {
+  	$('#datetimepicker3').datetimepicker({
+    	format: 'LT'
+     });
+  });
+
+</script>

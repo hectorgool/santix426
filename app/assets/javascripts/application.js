@@ -18,4 +18,6 @@
 //= require leaflet
 //= require photoswipe
 //= require bootstrap-datepicker
+//= require moment
+//= require bootstrap-datetimepicker
 //= require santo

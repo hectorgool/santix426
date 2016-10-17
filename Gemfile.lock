@@ -51,6 +51,8 @@ GEM
       sass (>= 3.3.4)
     bootstrap-social-rails (4.12.0)
       railties (>= 3.1)
+    bootstrap3-datetimepicker-rails (4.17.42)
+      momentjs-rails (>= 2.8.1)
     builder (3.2.2)
     byebug (9.0.5)
     capybara (2.9.1)
@@ -248,6 +250,8 @@ GEM
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    momentjs-rails (2.15.1)
+      railties (>= 3.1)
     multi_json (1.12.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -365,6 +369,7 @@ DEPENDENCIES
   bootstrap-datepicker-rails
   bootstrap-sass
   bootstrap-social-rails
+  bootstrap3-datetimepicker-rails (~> 4.17.42)
   byebug
   capybara (~> 2.4)
   carrierwave
@@ -378,6 +383,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   leaflet-rails (~> 0.7.7)
+  momentjs-rails (>= 2.9.0)
   pg (~> 0.15)
   photoswipe-rails (~> 4.1, >= 4.1.1)
   pundit (~> 1.1)
