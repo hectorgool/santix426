@@ -17,3 +17,5 @@
 //= require bootstrap-sprockets
 //= require leaflet
 //= require photoswipe
+//= require bootstrap-datepicker
+//= require santo
