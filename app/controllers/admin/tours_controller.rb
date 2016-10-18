@@ -8,6 +8,7 @@ class Admin::ToursController < Admin::ApplicationController
 
   def create
     @tour = Tour.new(tour_params)
+    @tour.user = current_user
     if @tour.save
       flash[:notice] = "Tour has been created."
       redirect_to @tour

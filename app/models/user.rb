@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
   #validates :lastname, if: ->(obj) { obj.new_record? || !obj.lastname.blank? }
 
   #santo
+  has_many :tours, dependent: :destroy
+
+  #santo
 	def archive
 		self.update(archived_at: Time.now)
 	end

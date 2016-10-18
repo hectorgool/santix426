@@ -7,4 +7,7 @@ class Tour < ActiveRecord::Base
   #santo
   mount_uploader :attachment, AttachmentUploader
 
+  #santo
+  belongs_to :user
+
 end

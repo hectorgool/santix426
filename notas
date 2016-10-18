@@ -81,3 +81,10 @@ Parsing documentation for flux-rails-assets-2.1.0
 Installing ri documentation for flux-rails-assets-2.1.0
 Done installing documentation for flux-rails-assets after 0 seconds
 1 gem installed
+
+
+rails g migration add_user_to_tours user:references
+rails d migration add_user_to_tours user:references
+
+<%= time_ago_in_words(@ticket.created_at) %> ago
+
