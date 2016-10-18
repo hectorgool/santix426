@@ -65,3 +65,19 @@ rails g migration add_lastname_at_to_users lastname:string
     <% if user_signed_in? %>
 
  bundle exec rspec spec/features/
+
+oem@santo:~/rails/dev/santix426$ rails g react:install
+Running via Spring preloader in process 30159
+      create  app/assets/javascripts/components
+      create  app/assets/javascripts/components/.gitkeep
+      insert  app/assets/javascripts/application.js
+      insert  app/assets/javascripts/application.js
+      insert  app/assets/javascripts/application.js
+      create  app/assets/javascripts/components.js
+
+oem@santo:~/rails/dev/santix426$ sudo gem install flux-rails-assets
+Successfully installed flux-rails-assets-2.1.0
+Parsing documentation for flux-rails-assets-2.1.0
+Installing ri documentation for flux-rails-assets-2.1.0
+Done installing documentation for flux-rails-assets after 0 seconds
+1 gem installed

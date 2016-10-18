@@ -20,4 +20,10 @@
 //= require bootstrap-datepicker
 //= require moment
 //= require bootstrap-datetimepicker
+//= require lodash
+//= require react
+//= require react_ujs
+//= require components
+//= require flux
+//= require eventemitter
 //= require santo
