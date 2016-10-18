@@ -86,5 +86,10 @@ Done installing documentation for flux-rails-assets after 0 seconds
 rails g migration add_user_to_tours user:references
 rails d migration add_user_to_tours user:references
 
+Linking tickets to users
+
+rails d migration add_author_to_tours author:references
+
+
 <%= time_ago_in_words(@ticket.created_at) %> ago
 

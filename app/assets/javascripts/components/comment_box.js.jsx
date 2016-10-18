@@ -1,4 +1,4 @@
-/*
+
 var CommentBox = React.createClass({
   render: function() {
     return (
@@ -12,4 +12,3 @@ ReactDOM.render(
   <CommentBox />,
   document.getElementById('content')
 );
-*/

@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require bootstrap-sprockets
 //= require leaflet
 //= require photoswipe
@@ -26,4 +25,5 @@
 //= require components
 //= require flux
 //= require eventemitter
+//= require_tree .
 //= require santo
