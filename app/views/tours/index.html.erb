@@ -9,7 +9,8 @@
   </h1>
 </div>
 
-<%= render "layouts/search" %>
+<%= react_component('SearchBox') %>
+<br />
 
 <% @tours.in_groups_of(3, false).each do |group| %>
   <div class="row">

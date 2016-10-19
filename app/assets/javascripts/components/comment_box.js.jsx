@@ -2,13 +2,12 @@
 var CommentBox = React.createClass({
   render: function() {
     return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
+      <div className="container">
+        <h2>
+          Comments
+        </h2>
+        <textarea className="form-control" rows="8"></textarea>
       </div>
     );
   }
 });
-ReactDOM.render(
-  <CommentBox />,
-  document.getElementById('content')
-);
