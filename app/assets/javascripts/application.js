@@ -22,8 +22,9 @@
 //= require lodash
 //= require react
 //= require react_ujs
-//= require components
 //= require flux
 //= require eventemitter
-//= require_tree .
+//= require components
 //= require santo
+//= require_tree .
+

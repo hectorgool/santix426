@@ -93,3 +93,17 @@ rails d migration add_author_to_tours author:references
 
 <%= time_ago_in_words(@ticket.created_at) %> ago
 
+
+naranja
+#F4645F
+#F5736F
+
+azul
+#27B4A8 
+#3CBBB1
+
+Texto
+#B2B2B2
+
+Fondo
+#F0F2F1

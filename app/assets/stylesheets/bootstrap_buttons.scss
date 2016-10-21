@@ -48,3 +48,98 @@ fieldset[disabled] .btn-black.active {
   color: #2E2E2E; 
   background-color: #ffffff; 
 }
+
+
+
+.btn-orange { 
+  color: #ffffff; 
+  background-color: #F5736F; 
+  border-color: #F55B56; 
+} 
+ 
+.btn-orange:hover, 
+.btn-orange:focus, 
+.btn-orange:active, 
+.btn-orange.active, 
+.open .dropdown-toggle.btn-orange { 
+  color: #ffffff; 
+  background-color: #F4645F; 
+  border-color: #F55B56; 
+} 
+ 
+.btn-orange:active, 
+.btn-orange.active, 
+.open .dropdown-toggle.btn-orange { 
+  background-image: none; 
+} 
+ 
+.btn-orange.disabled, 
+.btn-orange[disabled], 
+fieldset[disabled] .btn-orange, 
+.btn-orange.disabled:hover, 
+.btn-orange[disabled]:hover, 
+fieldset[disabled] .btn-orange:hover, 
+.btn-orange.disabled:focus, 
+.btn-orange[disabled]:focus, 
+fieldset[disabled] .btn-orange:focus, 
+.btn-orange.disabled:active, 
+.btn-orange[disabled]:active, 
+fieldset[disabled] .btn-orange:active, 
+.btn-orange.disabled.active, 
+.btn-orange[disabled].active, 
+fieldset[disabled] .btn-orange.active { 
+  background-color: #F5736F; 
+  border-color: #F55B56; 
+} 
+ 
+.btn-orange .badge { 
+  color: #F5736F; 
+  background-color: #ffffff; 
+}
+
+
+.btn-aqua { 
+  color: #ffffff; 
+  background-color: #3CBBB1; 
+  border-color: #29A399; 
+} 
+ 
+.btn-aqua:hover, 
+.btn-aqua:focus, 
+.btn-aqua:active, 
+.btn-aqua.active, 
+.open .dropdown-toggle.btn-aqua { 
+  color: #ffffff; 
+  background-color: #27B4A8; 
+  border-color: #29A399; 
+} 
+ 
+.btn-aqua:active, 
+.btn-aqua.active, 
+.open .dropdown-toggle.btn-aqua { 
+  background-image: none; 
+} 
+ 
+.btn-aqua.disabled, 
+.btn-aqua[disabled], 
+fieldset[disabled] .btn-aqua, 
+.btn-aqua.disabled:hover, 
+.btn-aqua[disabled]:hover, 
+fieldset[disabled] .btn-aqua:hover, 
+.btn-aqua.disabled:focus, 
+.btn-aqua[disabled]:focus, 
+fieldset[disabled] .btn-aqua:focus, 
+.btn-aqua.disabled:active, 
+.btn-aqua[disabled]:active, 
+fieldset[disabled] .btn-aqua:active, 
+.btn-aqua.disabled.active, 
+.btn-aqua[disabled].active, 
+fieldset[disabled] .btn-aqua.active { 
+  background-color: #3CBBB1; 
+  border-color: #29A399; 
+} 
+ 
+.btn-aqua .badge { 
+  color: #3CBBB1; 
+  background-color: #ffffff; 
+}

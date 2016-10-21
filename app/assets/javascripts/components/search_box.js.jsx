@@ -1,5 +1,10 @@
 
 var SearchBox = React.createClass({
+
+  propTypes: {
+    term: React.PropTypes.string
+  },
+
   render: function() {
     return (
       <div className="input-group input-group-lg">
@@ -10,6 +15,7 @@ var SearchBox = React.createClass({
       </div>
     );
   }
+
 });
 
 var SearchButton = React.createClass({
