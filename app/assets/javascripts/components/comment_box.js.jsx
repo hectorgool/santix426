@@ -79,7 +79,9 @@ var Store = new _.extend({}, EventEmitter.prototype, {
 
 
 //Dispatcher, Flux
+//var AppDispatcher = new FluxDispatcher();
 var AppDispatcher = new Flux.Dispatcher();
+
 
 AppDispatcher.register(function(playload){
 
