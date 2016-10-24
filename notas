@@ -107,3 +107,10 @@ Texto
 
 Fondo
 #F0F2F1
+
+rails g model attachment file:string tour:references
+
+rails g migration remove_attachment_from_tours attachment:string
+
+bundle exec rake db:migrate
+

@@ -4,6 +4,8 @@ class Admin::ToursController < Admin::ApplicationController
 
 	def new
     @tour = Tour.new
+    #santo
+    3.times { @tour.attachments.build }
   end
 
   def create
@@ -47,7 +49,8 @@ class Admin::ToursController < Admin::ApplicationController
     end 
   
 	  def tour_params
-	    params.require(:tour).permit(:name, :description, :price, :latitude, :longitude, :attachment, :attachment_cache)
-	  end
+	    #params.require(:tour).permit(:name, :description, :price, :latitude, :longitude, :attachment, :attachment_cache)
+      params.require(:tour).permit(:name, :description, :price, :latitude, :longitude, attachments_attributes: [:file, :file_cache])    
+    end
 
 end

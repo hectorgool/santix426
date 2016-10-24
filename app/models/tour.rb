@@ -5,7 +5,13 @@ class Tour < ActiveRecord::Base
   has_many :roles, dependent: :delete_all
 
   #santo
-  mount_uploader :attachment, AttachmentUploader
+  has_many :attachments, dependent: :destroy
+
+  #santo
+  accepts_nested_attributes_for :attachments, reject_if: :all_blank
+
+  #santo
+  #mount_uploader :attachment, AttachmentUploader
 
   #santo
   belongs_to :user

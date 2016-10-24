@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161018154711) do
+ActiveRecord::Schema.define(version: 20161024220228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachments", force: :cascade do |t|
+    t.string   "file"
+    t.integer  "tour_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "attachments", ["tour_id"], name: "index_attachments_on_tour_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
@@ -42,7 +51,6 @@ ActiveRecord::Schema.define(version: 20161018154711) do
     t.decimal  "price"
     t.decimal  "latitude",    precision: 10, scale: 6
     t.decimal  "longitude",   precision: 10, scale: 6
-    t.string   "attachment"
     t.integer  "user_id"
   end
 
@@ -70,5 +78,6 @@ ActiveRecord::Schema.define(version: 20161018154711) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "attachments", "tours"
   add_foreign_key "tours", "users"
 end
