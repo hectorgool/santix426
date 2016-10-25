@@ -17,3 +17,12 @@ unless User.exists?(email: "hectorgool@gmail.com")
   User.create!(firstname: "Hector", lastname: "Gonzalez Olmos", email: "hectorgool@gmail.com", password: "asdfasdf")
 end
 
+#santo. create tour
+unless Tour.exists?(name: "Mahahual")
+  Tour.create!(name: "Mahahual", 
+               description: "Mahahual se encuentra sobre la costa del Mar Caribe, a unos 55km de la Carretera Federal 307 Cancún-Chetumal.", 
+               price: "99.99", 
+               latitude: "18.7167",
+               longitude: "-87.7167",
+               user_id: "1")
+end

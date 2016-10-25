@@ -69,7 +69,7 @@ gem 'friendly_id', '~> 5.1'
 gem 'carrierwave'
 
 #santo
-gem "fog"
+gem 'fog'
 
 #santo
 gem 'bootstrap-datepicker-rails'
@@ -86,7 +86,7 @@ gem 'lodash-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem "rspec-rails", "~> 3.4.2"#santo
+  gem 'rspec-rails', '~> 3.4.2'#santo
 end
 
 group :development do
@@ -100,6 +100,7 @@ end
 #santo
 #The ~> operator is called the approximate version constraint.
 group :test do
-  gem "capybara", "~> 2.4"
-  gem "factory_girl_rails", "~> 4.5"
+  gem 'capybara', '~> 2.4'
+  gem 'factory_girl_rails', '~> 4.5'
+  gem 'selenium-webdriver', '~> 3.0'
 end

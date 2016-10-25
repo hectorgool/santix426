@@ -109,8 +109,89 @@ Fondo
 #F0F2F1
 
 rails g model attachment file:string tour:references
+rails d model attachment file:string tour:references
 
 rails g migration remove_attachment_from_tours attachment:string
 
 bundle exec rake db:migrate
 
+<% if tour.attachment.present? %>
+  <%= image_tag tour.attachment, class: 'img-responsive', alt: tour.name %>
+<% end %>
+
+<%= link_to tour do %>
+
+  <% if @tour.attachments.any? %>
+
+    <% @tour.attachments.each do |attachment| %>
+      <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
+    <% end %>                
+
+  <% end %>              
+
+<% end %>
+
+
+
+<%= link_to tour do %>
+
+  <% if @tour.attachments.any? %>
+
+    <% @tour.attachments.each do |attachment| %>
+      <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
+    <% end %>       
+
+    <% @tour.attachments.each_with_index do |attachment, index| %>
+      <% if index == 0 %>
+        <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
+      <% end %>
+    <% end %>     
+
+  <% end %>              
+
+<% end %>
+
+
+      <div id="attachments">
+        <h3>Attachments</h3>
+        <%= f.simple_fields_for :attachments, child_index: index do |ff| %>
+          <%= ff.input :file, as: :file, label: "File ##{index += 1}" %>
+          <%= ff.input :file_cache, as: :hidden %>
+        <% end %>
+      </div>
+
+
+      <h3>Attachments</h3>
+      <%= f.simple_fields_for :attachments do |ff| %>
+        <%= ff.input :file, as: :file, label: "File ##{ff.index + 1}" %>
+        <%= ff.input :file_cache, as: :hidden %>
+      <% end %>
+
+
+            <% index = 0 %>
+      <%= f.simple_fields_for :attachments, child_index: index do |ff| %>
+        <%= ff.input :file, as: :file, label: "File ##{index += 1}" %>
+        <%= ff.input :file_cache, as: :hidden %>
+      <% end %>
+
+
+    <div class="item active">
+      <%= image_tag '4.jpg', class: 'img-responsive', alt: @tour.name %> 
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag '2.jpg', class: 'img-responsive', alt: @tour.name %>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    
+    <div class="item">
+      <%= image_tag '3.jpg', class: 'img-responsive', alt: @tour.name %>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>

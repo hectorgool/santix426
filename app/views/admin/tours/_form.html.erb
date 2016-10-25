@@ -19,27 +19,11 @@
 
   <div class="panel panel-default">
     <div class="panel-body">
-
-      <%= 
-        #f.input :attachment, as: :file, label: 'File' 
-      %>
-      <%= 
-      #f.input :attachment_cache, as: :hidden 
-      %>
-
-      <div id="attachments">
-        <h3>Attachments</h3>
-        <% index = 0 %>
-        <%= f.simple_fields_for :attachments, child_index: index do |ff| %>
-          <%= ff.input :file, as: :file, label: "File ##{index += 1}" %>
+      <h3>Attachments</h3>
+        <%= f.simple_fields_for :attachments do |ff| %>
+          <%= ff.input :file, as: :file, label: "File ##{ff.index + 1}" %>
           <%= ff.input :file_cache, as: :hidden %>
         <% end %>
-      </div>
-
-      <%= 
-        #image_tag tour.attachment, class: 'img-responsive', alt: tour.name 
-      %>
-    
     </div>
   </div>
 

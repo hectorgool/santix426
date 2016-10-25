@@ -46,9 +46,15 @@
           <div class="panel-body_image">
 
             <%= link_to tour do %>
-              <% if tour.attachment.present? %>
-                <%= image_tag tour.attachment, class: 'img-responsive', alt: tour.name %>
-              <% end %>
+
+              <% if tour.attachments.any? %>
+                <% tour.attachments.each_with_index do |attachment, index| %>
+                  <% if index == 0 %>
+                    <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
+                  <% end %>
+                <% end %>
+              <% end %>              
+
             <% end %>
 
           </div>
