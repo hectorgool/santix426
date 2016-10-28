@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20161025152450) do
 
   add_index "attachments", ["tour_id"], name: "index_attachments_on_tour_id", using: :btree
 
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "roles", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "role"
