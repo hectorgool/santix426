@@ -93,4 +93,8 @@ Rails.application.routes.draw do
   #   resources :tours, only: [:new, :create, :edit, :update, :destroy]
   # end
 
+  #santo
+  #stripe
+  resources :charges
+
 end

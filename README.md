@@ -21,3 +21,9 @@ http://www.rubydoc.info/gems/lodash-rails/4.16.4
 http://stackoverflow.com/questions/8181390/how-to-act-differently-on-first-iteration-in-a-ruby-loop
 
 https://github.com/bbatsov/ruby-style-guide
+
+#stripe
+https://dashboard.stripe.com/account/apikeys
+
+https://stripe.com/docs/checkout/rails
+
