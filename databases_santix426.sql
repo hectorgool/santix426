@@ -10,10 +10,13 @@ CREATE DATABASE "santix426_production" WITH ENCODING 'UTF8';
 DROP USER "santo";
 CREATE USER "santo" WITH PASSWORD 'asdfasdf';
 
-GRANT ALL ON DATABASE "santix426_development" TO santo;
-GRANT ALL ON DATABASE "santix426_test" TO santo;
-GRANT ALL ON DATABASE "santix426_production" TO santo;
+GRANT ALL PRIVILEGES ON DATABASE "santix426_development" TO santo;
+GRANT ALL PRIVILEGES ON DATABASE "santix426_test" TO santo;
+GRANT ALL PRIVILEGES ON DATABASE "santix426_production" TO santo;
 
 ALTER DATABASE "santix426_development" OWNER TO santo;
 ALTER DATABASE "santix426_test" OWNER TO santo;
 ALTER DATABASE "santix426_production" OWNER TO santo;
+
+ALTER USER santo CREATEDB;
+
