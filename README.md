@@ -27,3 +27,4 @@ https://dashboard.stripe.com/account/apikeys
 
 https://stripe.com/docs/checkout/rails
 
+http://stackoverflow.com/questions/15257555/how-to-reference-images-in-css-within-rails-4
