@@ -96,5 +96,8 @@ Rails.application.routes.draw do
   #santo
   #stripe
   resources :charges
+  #santo
+  #stripe
+  resources :reservations
 
 end

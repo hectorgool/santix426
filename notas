@@ -1,16 +1,6 @@
 
 rails g migration add_price_to_tours price:decimal
-
 rails d migration add_price_to_tours price:decimal
-
-
-  <%= 
-  	f.text_area :description, 
-  	label: 'Description', 
-  	class: 'form-control input-lg', 
-  	rows: '7',
-  	:input_html => {:minlength => 10 , maxlength: 25}  
-  %><br />
 
 
 rails g migration add_latitude_at_to_tours latitude:float
@@ -20,68 +10,11 @@ rails g migration add_longitude_at_to_tours longitude:float
 rails g migration add_firstname_at_to_users firstname:string
 rails g migration add_lastname_at_to_users lastname:string
 
-			<!--
-			<%= 
-				#render "layouts/carousel" 
-			%>
-			-->
+rails g migration add_archived_at_to_users archived_at:timestamp
 
-			<%= image_tag '1.jpg', class: 'img-responsive', alt: @tour.name %>
-			
+bundle exec rspec spec/features/
 
-  namespace :admin do
-  get 'users/index'
-  end
-
-  namespace :admin do
-  get 'users/show'
-  end
-
-  namespace :admin do
-  get 'users/new'
-  end
-
-  namespace :admin do
-  get 'users/create'
-  end
-
-  namespace :admin do
-  get 'users/edit'
-  end
-
-  namespace :admin do
-  get 'users/update'
-  end
-
-  namespace :admin do
-  get 'users/destroy'
-  end
-
-
-   rails g migration add_archived_at_to_users archived_at:timestamp
-
-              <%= image_tag '2.jpg', class: 'img-responsive', alt: tour.name %>
-
-    <% if user_signed_in? %>
-
- bundle exec rspec spec/features/
-
-oem@santo:~/rails/dev/santix426$ rails g react:install
-Running via Spring preloader in process 30159
-      create  app/assets/javascripts/components
-      create  app/assets/javascripts/components/.gitkeep
-      insert  app/assets/javascripts/application.js
-      insert  app/assets/javascripts/application.js
-      insert  app/assets/javascripts/application.js
-      create  app/assets/javascripts/components.js
-
-oem@santo:~/rails/dev/santix426$ sudo gem install flux-rails-assets
-Successfully installed flux-rails-assets-2.1.0
-Parsing documentation for flux-rails-assets-2.1.0
-Installing ri documentation for flux-rails-assets-2.1.0
-Done installing documentation for flux-rails-assets after 0 seconds
-1 gem installed
-
+rails g react:install
 
 rails g migration add_user_to_tours user:references
 rails d migration add_user_to_tours user:references
@@ -94,20 +27,21 @@ rails d migration add_author_to_tours author:references
 <%= time_ago_in_words(@ticket.created_at) %> ago
 
 
-naranja
+orange
 #F4645F
 #F5736F
 
-azul
+blue
 #27B4A8 
 #3CBBB1
 
-Texto
+color text
 #B2B2B2
 
-Fondo
+color background
 #F0F2F1
 
+#Create model Attachment
 rails g model attachment file:string tour:references
 rails d model attachment file:string tour:references
 
@@ -115,118 +49,35 @@ rails g migration remove_attachment_from_tours attachment:string
 
 bundle exec rake db:migrate
 
-<% if tour.attachment.present? %>
-  <%= image_tag tour.attachment, class: 'img-responsive', alt: tour.name %>
-<% end %>
-
-<%= link_to tour do %>
-
-  <% if @tour.attachments.any? %>
-
-    <% @tour.attachments.each do |attachment| %>
-      <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
-    <% end %>                
-
-  <% end %>              
-
-<% end %>
-
-
-
-<%= link_to tour do %>
-
-  <% if @tour.attachments.any? %>
-
-    <% @tour.attachments.each do |attachment| %>
-      <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
-    <% end %>       
-
-    <% @tour.attachments.each_with_index do |attachment, index| %>
-      <% if index == 0 %>
-        <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
-      <% end %>
-    <% end %>     
-
-  <% end %>              
-
-<% end %>
-
-
-      <div id="attachments">
-        <h3>Attachments</h3>
-        <%= f.simple_fields_for :attachments, child_index: index do |ff| %>
-          <%= ff.input :file, as: :file, label: "File ##{index += 1}" %>
-          <%= ff.input :file_cache, as: :hidden %>
-        <% end %>
-      </div>
-
-
-      <h3>Attachments</h3>
-      <%= f.simple_fields_for :attachments do |ff| %>
-        <%= ff.input :file, as: :file, label: "File ##{ff.index + 1}" %>
-        <%= ff.input :file_cache, as: :hidden %>
-      <% end %>
-
-
-            <% index = 0 %>
-      <%= f.simple_fields_for :attachments, child_index: index do |ff| %>
-        <%= ff.input :file, as: :file, label: "File ##{index += 1}" %>
-        <%= ff.input :file_cache, as: :hidden %>
-      <% end %>
-
-
-    <div class="item active">
-      <%= image_tag '4.jpg', class: 'img-responsive', alt: @tour.name %> 
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-
-    <div class="item">
-      <%= image_tag '2.jpg', class: 'img-responsive', alt: @tour.name %>
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-    
-    <div class="item">
-      <%= image_tag '3.jpg', class: 'img-responsive', alt: @tour.name %>
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-
-
   
-
+#Create controller
 rails g controller charges
-
 rails d controller charges
 
 
-
+#stripe
 PUBLISHABLE_KEY=pk_test_DMYP6n5EHTcq4qsxr38fnRBV \
 SECRET_KEY=sk_test_voz4VAtKrhhq0gxdC1CRHq8K rails s
 
 
-      <br />
-      <div class="row">
-        <div class="col-md-6">
-          
-          <i class="fa fa-paw fa-1x" aria-hidden="true"></i><br />
+#Create Reservations Model
+rails g model reservation customers:integer date:date schedule:date tour:references user:references
+rails d model reservation customers:integer date:date schedule:date tour:references user:references
 
-          <i class="fa fa-bicycle fa-1x" aria-hidden="true"></i><br />
+#Create Reservations Controller
+rails g controller reservations index new create show edit update destroy
+rails d controller reservations index new create show edit update destroy
 
-          <i class="fa fa-life-ring fa-1x" aria-hidden="true"></i><br />
+get 'reservations/index'
 
-        </div>
-        <div class="col-md-6">
+get 'reservations/new'
 
-          <i class="fa fa-paw fa-1x" aria-hidden="true"></i><br />
+get 'reservations/create'
 
-          <i class="fa fa-bicycle fa-1x" aria-hidden="true"></i><br />
+get 'reservations/show'
 
-          <i class="fa fa-life-ring fa-1x" aria-hidden="true"></i><br />
-      
-        </div>
-      </div>
+get 'reservations/edit'
+
+get 'reservations/update'
+
+get 'reservations/destroy'
