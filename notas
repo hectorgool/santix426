@@ -205,3 +205,28 @@ rails d controller charges
 
 
 
+PUBLISHABLE_KEY=pk_test_DMYP6n5EHTcq4qsxr38fnRBV \
+SECRET_KEY=sk_test_voz4VAtKrhhq0gxdC1CRHq8K rails s
+
+
+      <br />
+      <div class="row">
+        <div class="col-md-6">
+          
+          <i class="fa fa-paw fa-1x" aria-hidden="true"></i><br />
+
+          <i class="fa fa-bicycle fa-1x" aria-hidden="true"></i><br />
+
+          <i class="fa fa-life-ring fa-1x" aria-hidden="true"></i><br />
+
+        </div>
+        <div class="col-md-6">
+
+          <i class="fa fa-paw fa-1x" aria-hidden="true"></i><br />
+
+          <i class="fa fa-bicycle fa-1x" aria-hidden="true"></i><br />
+
+          <i class="fa fa-life-ring fa-1x" aria-hidden="true"></i><br />
+      
+        </div>
+      </div>
