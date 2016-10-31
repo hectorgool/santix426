@@ -30,3 +30,5 @@ https://stripe.com/docs/checkout/rails
 http://stackoverflow.com/questions/15257555/how-to-reference-images-in-css-within-rails-4
 
 http://stackoverflow.com/questions/28293835/how-to-add-a-date-attribute-in-rails-models
+
+http://stackoverflow.com/questions/4020131/rails-db-migration-how-to-drop-a-table
