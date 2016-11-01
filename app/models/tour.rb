@@ -11,9 +11,12 @@ class Tour < ActiveRecord::Base
   accepts_nested_attributes_for :attachments, reject_if: :all_blank
 
   #santo
-  #mount_uploader :attachment, AttachmentUploader
+  belongs_to :user
 
   #santo
-  belongs_to :user
+  has_many :reservations, dependent: :destroy
+
+  #santo
+  accepts_nested_attributes_for :reservations, reject_if: :all_blank
 
 end

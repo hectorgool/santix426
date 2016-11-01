@@ -32,3 +32,5 @@ http://stackoverflow.com/questions/15257555/how-to-reference-images-in-css-withi
 http://stackoverflow.com/questions/28293835/how-to-add-a-date-attribute-in-rails-models
 
 http://stackoverflow.com/questions/4020131/rails-db-migration-how-to-drop-a-table
+
+http://stackoverflow.com/questions/11093848/rails-undefined-method-model-name-for-nilclassclass

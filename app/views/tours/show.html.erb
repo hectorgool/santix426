@@ -70,6 +70,11 @@
   					Reservations
   				</h2>
 
+  				
+  				<%= render 'form_reservations'  %> 
+
+  				
+  				<!--
 					<div class="input-group input-group-lg">
 	  				<input type="text" class="form-control datepicker" placeholder="Select Date" aria-describedby="sizing-addon1">
 	  				<span class="input-group-addon" id="sizing-addon1">
@@ -94,6 +99,7 @@
 					<button type="button" class="btn btn-orange btn-lg btn-block" data-toggle="modal" data-target="#addToCart">
 					  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to cart
 					</button>
+					-->
 
 				</div>
 			</div>
@@ -110,23 +116,6 @@
 
 		</div>
 
-		<div class="panel-footer">
-			<span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share: 
-			<!--start:bootstrap social-->
-			<a class="btn btn-social-icon btn-lg btn-twitter">
-				<i class="fa fa-twitter"></i>
-			</a>
-			<a class="btn btn-social-icon btn-lg btn-pinterest">
-				<i class="fa fa-pinterest"></i>
-			</a>
-			<a class="btn btn-social-icon btn-lg btn-facebook">
-				<i class="fa fa-facebook"></i>
-			</a>
-			<a class="btn btn-social-icon btn-lg btn-google">
-				<i class="fa fa-google-plus"></i>
-			</a>				
-			<!--end:bootstrap social-->
-		</div>
 	</div>
 </div>
 
@@ -151,7 +140,27 @@
 				)
 			%>
 
-		</div>	
+		</div>
+
+		<div class="panel-body">
+			<div class="pull-right">
+				<span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share: 
+				<!--start:bootstrap social-->
+				<a class="btn btn-social-icon btn-lg btn-twitter">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a class="btn btn-social-icon btn-lg btn-pinterest">
+					<i class="fa fa-pinterest"></i>
+				</a>
+				<a class="btn btn-social-icon btn-lg btn-facebook">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a class="btn btn-social-icon btn-lg btn-google">
+					<i class="fa fa-google-plus"></i>
+				</a>				
+				<!--end:bootstrap social-->
+			</div>
+		</div>
 	</div>
 </div>	
 

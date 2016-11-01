@@ -10,6 +10,10 @@ class ToursController < ApplicationController
     #rescue ActiveRecord::RecordNotFound
     #flash[:alert] = "The tour you were looking for could not be found."
     #redirect_to tours_path
+
+    @reservations = Reservation.new
+    #@tour.reservations.build
+
     respond_to do |format|
       format.html
       format.json { render json: @tour }
