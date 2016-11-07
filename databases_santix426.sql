@@ -9,6 +9,7 @@ CREATE DATABASE "santix426_production" WITH ENCODING 'UTF8';
 
 DROP USER "santo";
 CREATE USER "santo" WITH PASSWORD 'asdfasdf';
+ALTER USER "santo" WITH SUPERUSER;
 
 GRANT ALL PRIVILEGES ON DATABASE "santix426_development" TO santo;
 GRANT ALL PRIVILEGES ON DATABASE "santix426_test" TO santo;
