@@ -4,7 +4,8 @@ class Admin::ToursController < Admin::ApplicationController
 
 	def new
     @tour = Tour.new
-    3.times { @tour.attachments.build }
+    #3.times { @tour.attachments.build }
+    @tour.attachments.build
   end
 
   def create

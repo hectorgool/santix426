@@ -100,4 +100,7 @@ Rails.application.routes.draw do
   #stripe
   resources :reservations
 
+  #santo
+  resources :attachments, only: [:show, :new]
+
 end
