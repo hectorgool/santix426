@@ -34,3 +34,7 @@ http://stackoverflow.com/questions/28293835/how-to-add-a-date-attribute-in-rails
 http://stackoverflow.com/questions/4020131/rails-db-migration-how-to-drop-a-table
 
 http://stackoverflow.com/questions/11093848/rails-undefined-method-model-name-for-nilclassclass
+
+
+#CarrierWave
+https://github.com/carrierwaveuploader/carrierwave

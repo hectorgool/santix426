@@ -94,3 +94,12 @@ get 'reservations/destroy'
   <%= f.button :submit, class: 'btn btn-orange btn-lg btn-block' %>
 
 <% end %>
+
+<div id="attachments">
+<h3>Attachments</h3>
+<% index = 0 %>
+<%= f.simple_fields_for :attachments, child_index: index do |ff| %>
+  <%= ff.input :file, as: :file, label: "File ##{index += 1}" %>
+  <%= ff.input :file_cache, as: :hidden %>
+<% end %>
+</div>
