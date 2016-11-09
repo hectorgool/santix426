@@ -1,5 +1,8 @@
 class ReservationsController < ApplicationController
 
+  before_action :set_tour
+  before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+
   def index
     @reservations = Reservation.last(12).reverse
   end
@@ -21,11 +24,13 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    #@reservation = Reservation.new(reservation_params)
+    @reservation      = @tour.reservations.build(reservation_params)
     @reservation.user = current_user
     if @reservation.save
       flash[:notice] = "Reservation has been created."
-      redirect_to @reservation
+      #redirect_to @reservation
+      redirect_to [@tour, @reservation]
     else
       flash.now[:alert] = "Reservation has not been created."
       render "new"
@@ -55,7 +60,8 @@ class ReservationsController < ApplicationController
   private
 
     def set_reservation
-      @reservation = Reservation.find(params[:id])
+      #@reservation = Reservation.find(params[:id])
+      @reservation = @tour.reservations.find(params[:id])
       rescue ActiveRecord::RecordNotFound
       flash[:alert] = "The reservation you were looking for could not be found."
       redirect_to reservations_path

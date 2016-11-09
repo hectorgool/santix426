@@ -4,7 +4,6 @@ class Admin::ToursController < Admin::ApplicationController
 
 	def new
     @tour = Tour.new
-    #3.times { @tour.attachments.build }
     @tour.attachments.build
   end
 
@@ -27,13 +26,9 @@ class Admin::ToursController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @tour.update(tour_params)
-        #flash[:notice] = "Tour has been updated."
-        #redirect_to @tour
         format.html { redirect_to @tour, notice: 'Tour was successfully updated.' }
         format.json { render :show, status: :ok, location: @tour }
       else
-        #flash.now[:alert] = "Tour has not been updated."
-        #render "edit"
         format.html { render :edit }
         format.json { render json: @tour.errors, status: :unprocessable_entity }
 
@@ -42,9 +37,6 @@ class Admin::ToursController < Admin::ApplicationController
   end
 
   def destroy
-    #@tour.destroy
-    #flash[:notice] = "Tour has been deleted."
-    #redirect_to tours_path
     @tour.destroy
       respond_to do |format|
       format.html { redirect_to tours_url, notice: 'Tour was successfully destroyed.' }

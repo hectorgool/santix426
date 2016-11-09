@@ -103,3 +103,10 @@ get 'reservations/destroy'
   <%= ff.input :file_cache, as: :hidden %>
 <% end %>
 </div>
+
+
+<%= simple_form_for(@reservation) do |f| %>
+
+  <%= f.button :submit, class: 'btn btn-orange btn-lg btn-block' %>
+
+<% end %>
