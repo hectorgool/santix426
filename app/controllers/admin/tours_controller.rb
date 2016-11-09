@@ -25,19 +25,31 @@ class Admin::ToursController < Admin::ApplicationController
   end
 
   def update
-    if @tour.update(tour_params)
-      flash[:notice] = "Tour has been updated."
-      redirect_to @tour
-    else
-      flash.now[:alert] = "Tour has not been updated."
-      render "edit"
+    respond_to do |format|
+      if @tour.update(tour_params)
+        #flash[:notice] = "Tour has been updated."
+        #redirect_to @tour
+        format.html { redirect_to @tour, notice: 'Tour was successfully updated.' }
+        format.json { render :show, status: :ok, location: @tour }
+      else
+        #flash.now[:alert] = "Tour has not been updated."
+        #render "edit"
+        format.html { render :edit }
+        format.json { render json: @tour.errors, status: :unprocessable_entity }
+
+      end
     end
   end
 
   def destroy
+    #@tour.destroy
+    #flash[:notice] = "Tour has been deleted."
+    #redirect_to tours_path
     @tour.destroy
-    flash[:notice] = "Tour has been deleted."
-    redirect_to tours_path
+      respond_to do |format|
+      format.html { redirect_to tours_url, notice: 'Tour was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
@@ -46,7 +58,7 @@ class Admin::ToursController < Admin::ApplicationController
       @tour = Tour.find(params[:id])
       rescue ActiveRecord::RecordNotFound
       flash[:alert] = "The tour you were looking for could not be found."
-      redirect_to tours_path
+      redirect_to tours_path 
     end 
   
 	  def tour_params
