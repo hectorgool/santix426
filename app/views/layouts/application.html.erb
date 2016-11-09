@@ -27,7 +27,7 @@
 	  </p>
 
 		<% flash.each do |key, message| %>
-			<div>
+			<div class="alert alert-<%= key %>">
 				<%= message %>
 			</div>
 		<% end %>
