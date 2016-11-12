@@ -2,7 +2,8 @@ class ToursController < ApplicationController
 
   def index
     #@tours = Tour.all
-    @tours = Tour.last(12).reverse   
+    #@tours = Tour.last(12).reverse  
+    @tours = Tour.paginate(:page => params[:page], :per_page => 9) 
   end
 
   def show

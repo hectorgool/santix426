@@ -103,3 +103,8 @@ get 'reservations/destroy'
   <%= ff.input :file_cache, as: :hidden %>
 <% end %>
 </div>
+
+
+rails g controller profiles index show new create edit update destroy
+
+

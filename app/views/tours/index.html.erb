@@ -116,7 +116,10 @@
   </div>
 <% end %>
 
-<button type="button" class="btn btn-default btn-lg btn-block">
-  Load more
-</button>
-<br />
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2 class="text-center">
+      <%= will_paginate @tours %>
+    </h2>
+  </div>
+</div>
