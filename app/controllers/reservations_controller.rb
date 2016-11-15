@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
 
   before_action :set_tour
-  before_action :authenticate_user!, only: [:new] #beta
+  before_filter :authenticate_user!, only: [:create] #beta
 
   def index
     @reservations = Reservation.last(12).reverse

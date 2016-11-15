@@ -19,7 +19,9 @@
 	<div class="container-fluid">
 
 		<p class="notice">
-			<%= notice %>
+			<%= 
+				#notice 
+			%>
 		</p>
 
 	  <p class="alert">
@@ -28,7 +30,9 @@
 
 		<% flash.each do |key, message| %>
 			<div class="alert alert-<%= key %>">
-				<%= message %>
+				<%= 
+					#message 
+				%>
 			</div>
 		<% end %>
 
