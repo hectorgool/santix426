@@ -1,0 +1,74 @@
+
+<div class="col-md-6 col-md-offset-3">
+	<div class="panel panel-default">
+  	<div class="panel-body">
+
+  		<center>
+    		<img src="<%= image_url('profile.png')%>" alt="..." class="img-circle img-responsive">
+
+      	<h1>
+      		<%= @user.firstname %> <%= @user.lastname %>	
+      	</h1>
+
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				
+				<div>
+					<a class="btn btn-social-icon btn-lg btn-twitter">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a class="btn btn-social-icon btn-lg btn-pinterest">
+						<i class="fa fa-pinterest"></i>
+					</a>
+					<a class="btn btn-social-icon btn-lg btn-facebook">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a class="btn btn-social-icon btn-lg btn-google">
+						<i class="fa fa-google-plus"></i>
+					</a>		
+					<a class="btn btn-social-icon btn-lg btn-reddit">
+						<i class="fa fa-reddit"></i>
+					</a>
+				</div>
+
+      </center>
+
+      <dl class="dl-horizontal">
+
+				<dt>
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+				</dt>
+				<dd>
+					<%= @user.email %>		
+				</dd>
+
+				<dt>
+					<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+				</dt>
+				<dd>
+					56 58 11 11		
+				</dd>
+
+			</dl>
+
+			<h3>
+				Tours	
+			</h3>
+
+			<ul>
+			  <li>Maruata</li>
+			  <li>Bacalar</li>
+			</ul>
+
+			<h3>
+				Comments
+			</h3>
+
+
+
+    </div>
+  </div>
+</div>

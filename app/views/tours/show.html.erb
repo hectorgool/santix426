@@ -46,7 +46,9 @@
 			</h3>
 
 			<h4>
-				<a>@santo</a>
+				<a href="/profiles/<%= @tour.user_id %>">
+					by @santo
+				</a>
 			</h4>
 			
 			<dl>
@@ -70,36 +72,7 @@
   					Reservations
   				</h2>
 
-  				
-  				<%= render 'form_reservations'  %> 
-
-  				
-  				<!--
-					<div class="input-group input-group-lg">
-	  				<input type="text" class="form-control datepicker" placeholder="Select Date" aria-describedby="sizing-addon1">
-	  				<span class="input-group-addon" id="sizing-addon1">
-	  					<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-	  				</span>
-					</div>
-
-          <div class="input-group input-group-lg date">
-            <input type='text' class="form-control" id="datetimepicker3" placeholder="Select Time" />
-            <span class="input-group-addon">
-              <span class="glyphicon glyphicon-time"></span>
-            </span>
-          </div>
-
-					<div class="input-group input-group-lg date">
-						<input class="form-control input-lg" type="number" min="1" max="100" value="1">
-  					<span class="input-group-addon">
-              <span class="glyphicon glyphicon-user"></span>
-            </span>
-          </div>
-
-					<button type="button" class="btn btn-orange btn-lg btn-block" data-toggle="modal" data-target="#addToCart">
-					  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to cart
-					</button>
-					-->
+  				<%=  render "reservations/form", tour: @tour, reservation: @reservation %> 
 
 				</div>
 			</div>
@@ -144,7 +117,7 @@
 
 		<div class="panel-body">
 			<div class="pull-right">
-				<span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share: 
+				<span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share with: 
 				<!--start:bootstrap social-->
 				<a class="btn btn-social-icon btn-lg btn-twitter">
 					<i class="fa fa-twitter"></i>
@@ -157,7 +130,10 @@
 				</a>
 				<a class="btn btn-social-icon btn-lg btn-google">
 					<i class="fa fa-google-plus"></i>
-				</a>				
+				</a>		
+				<a class="btn btn-social-icon btn-lg btn-reddit">
+					<i class="fa fa-reddit"></i>
+				</a>					
 				<!--end:bootstrap social-->
 			</div>
 		</div>

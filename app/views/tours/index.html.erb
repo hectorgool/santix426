@@ -80,7 +80,9 @@
               <a class="btn btn-social-icon btn-lg btn-google">
                 <i class="fa fa-google-plus"></i>
               </a>
-
+              <a class="btn btn-social-icon btn-lg btn-reddit">
+                <i class="fa fa-reddit"></i>
+              </a>  
             </p>
             <p class="text-left">
               <h3>
@@ -95,7 +97,9 @@
                 $<%= tour.price %> MNX
               </p>
               <p>
-                <span class="text-info">by @santo</span>
+                <span class="text-info">
+                  <a href="profiles/<%= tour.user_id %>">by @santo</a>
+                </span>
               </p>
             </h4>
             <p class="text-left">
@@ -118,8 +122,8 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <h2 class="text-center">
+    <h3 class="text-center">
       <%= will_paginate @tours %>
-    </h2>
+    </h3>
   </div>
 </div>

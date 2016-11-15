@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'profiles/index'
+
+  get 'profiles/show'
+
+  get 'profiles/new'
+
+  get 'profiles/create'
+
+  get 'profiles/edit'
+
+  get 'profiles/update'
+
+  get 'profiles/destroy'
+
   #namespace :admin do
   #get 'application/index'
   #end
@@ -85,7 +99,7 @@ Rails.application.routes.draw do
   end
 
   #santo
-  resources :tours, only: [:index, :show]
+  #resources :tours, only: [:index, :show]
 
   #santo
   # namespace :admin do
@@ -98,9 +112,17 @@ Rails.application.routes.draw do
   resources :charges
   #santo
   #stripe
-  resources :reservations
+  #resources :reservations
 
   #santo
   resources :attachments, only: [:show, :new]
+
+  # santo
+  resources :profiles
+
+  # santo
+  resources :tours do
+    resources :reservations
+  end
 
 end
