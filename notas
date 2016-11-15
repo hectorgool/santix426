@@ -105,6 +105,14 @@ get 'reservations/destroy'
 </div>
 
 
+<<<<<<< HEAD
 rails g controller profiles index show new create edit update destroy
 
 
+=======
+<%= simple_form_for(@reservation) do |f| %>
+
+  <%= f.button :submit, class: 'btn btn-orange btn-lg btn-block' %>
+
+<% end %>
+>>>>>>> f09ac1aad690c787482056da948d85c392d3e1bd

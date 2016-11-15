@@ -54,7 +54,7 @@ class ReservationsController < ApplicationController
   private
 
     def set_reservation
-      @reservation = Reservation.find(params[:id])
+      @reservation = @tour.reservations.find(params[:id])
       rescue ActiveRecord::RecordNotFound
       flash[:alert] = "The reservation you were looking for could not be found."
       redirect_to reservations_path

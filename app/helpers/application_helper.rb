@@ -5,4 +5,13 @@ module ApplicationHelper
 		block.call if current_user.try(:admin?)
 	end
 
+  #santo beta
+  def title(*parts)
+    unless parts.empty?
+      content_for :title do
+        (parts << "Tour").join(" - ")
+      end
+    end
+  end
+
 end
