@@ -1,19 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'profiles/index'
-
-  get 'profiles/show'
-
-  get 'profiles/new'
-
-  get 'profiles/create'
-
-  get 'profiles/edit'
-
-  get 'profiles/update'
-
-  get 'profiles/destroy'
-
   #namespace :admin do
   #get 'application/index'
   #end
@@ -118,7 +104,7 @@ Rails.application.routes.draw do
   resources :attachments, only: [:show, :new]
 
   # santo
-  resources :profiles
+  resources :profiles, only: [:show]
 
   # santo
   resources :tours do

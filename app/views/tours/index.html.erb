@@ -98,7 +98,15 @@
               </p>
               <p>
                 <span class="text-info">
-                  <a href="profiles/<%= tour.user_id %>">by @santo</a>
+                  <!--<a href="profiles/<%= tour.user_id %>">by @santo</a>-->
+                  <%= 
+                    #tour.to_yaml
+                    #link_to user.email, admin_user_url(user.id)
+                  %>
+                  <%= link_to profile_url(tour.user_id) do %>
+                    <%= tour.user.firstname %> <%= tour.user.lastname %> 
+                  <% end %>
+
                 </span>
               </p>
             </h4>

@@ -116,3 +116,5 @@ rails g controller profiles index show new create edit update destroy
 
 <% end %>
 >>>>>>> f09ac1aad690c787482056da948d85c392d3e1bd
+
+

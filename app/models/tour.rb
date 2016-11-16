@@ -19,4 +19,7 @@ class Tour < ActiveRecord::Base
   #santo
   accepts_nested_attributes_for :reservations, reject_if: :all_blank
 
+  # santo
+  attr_accessor :firstname, :lastname
+
 end

@@ -1,8 +1,8 @@
 class ProfilesController < ApplicationController
 
-  def index
-    @users = User.paginate(:page => params[:page], :per_page => 9) 
-  end
+  #def index
+  #  @users = User.paginate(:page => params[:page], :per_page => 9) 
+  #end
 
   def show
     @user = User.find(params[:id])
@@ -12,18 +12,19 @@ class ProfilesController < ApplicationController
     end  
   end
 
-  def new
-  end
+  #def new
+  #end
 
-  def create
-  end
+  #def create
+  #end
 
-  def edit
-  end
+  #def edit
+  #end
 
-  def update
-  end
+  #def update
+  #end
 
-  def destroy
-  end
+  #def destroy
+  #end
+
 end

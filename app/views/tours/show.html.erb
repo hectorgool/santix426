@@ -48,9 +48,9 @@
 			</h3>
 
 			<h4>
-				<a href="/profiles/<%= @tour.user_id %>">
-					by @santo
-				</a>
+        <%= link_to profile_url(@tour.user_id) do %>
+          <%= @tour.user.firstname %> <%= @tour.user.lastname %> 
+        <% end %>
 			</h4>
 			
 			<dl>
