@@ -22,4 +22,7 @@ class Tour < ActiveRecord::Base
   # santo
   attr_accessor :firstname, :lastname
 
+  # santo
+  paginates_per 9
+
 end

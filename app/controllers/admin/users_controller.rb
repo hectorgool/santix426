@@ -8,7 +8,8 @@ class Admin::UsersController < Admin::ApplicationController
 
   def index
     #@users = User.all
-    @users = User.paginate(:page => params[:page], :per_page => 9) 
+    #@users = User.paginate(:page => params[:page], :per_page => 9) 
+    @users = User.order(:firstname).page params[:page]
   end
 
   def show

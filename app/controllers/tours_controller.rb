@@ -1,7 +1,9 @@
 class ToursController < ApplicationController
 
   def index
-    @tours = Tour.paginate(:page => params[:page], :per_page => 9) 
+    #@tours = Tour.paginate(:page => params[:page], :per_page => 9) 
+    #@tours = Tour.page(9)
+    @tours = Tour.order(:name).page params[:page]
   end
 
   def show

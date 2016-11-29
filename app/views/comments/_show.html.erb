@@ -1,0 +1,12 @@
+
+<% @comments.each do |comment| %>
+  
+  <%= comment.body %>
+
+  <h6>
+    <small>
+      Created: <%= time_ago_in_words(tour.created_at) %> ago
+    </small>
+  </h6>
+
+<% end %>

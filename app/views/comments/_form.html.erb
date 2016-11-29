@@ -1,0 +1,14 @@
+<%= simple_form_for(@comment) do |f| %>
+
+  <label for="description">Comment</label>
+
+  <%= f.input :body, 
+    as: :text, 
+    label: false,
+    class: 'form-control input-lg', 
+    rows: '100'
+  %>
+
+  <%= f.button :submit, class: 'btn btn-orange btn-lg btn-block' %>
+
+<% end %>

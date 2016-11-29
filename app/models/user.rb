@@ -28,5 +28,8 @@ class User < ActiveRecord::Base
 	def inactive_message
 		archived_at.nil? ? super : :archived
 	end
+  
+  # santo
+  paginates_per 9
 
 end
