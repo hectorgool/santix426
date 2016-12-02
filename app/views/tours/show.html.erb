@@ -154,16 +154,14 @@
 			</h3>
 
 			<%=  render "comments/form", tour: @tour, comment: @comment %>
-
+			<hr>
 			<div id="comments">
 				<% if @tour.comments.persisted.any? %>
 					<%= render @tour.comments.persisted %>
 				<% else %>
-					<blockquote class="blockquote-reverse">
-						<p>
-							There are no comments for this tour.
-						</p>
-					</blockquote>
+					<p>
+						There are no comments for this tour.
+					</p>
 				<% end %>
 			</div>
 
