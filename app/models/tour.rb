@@ -25,4 +25,10 @@ class Tour < ActiveRecord::Base
   # santo
   paginates_per 9
 
+  # santo
+  has_many :comments, dependent: :destroy
+
+  #santo
+  accepts_nested_attributes_for :comments, reject_if: :all_blank
+
 end

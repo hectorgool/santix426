@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #end
 
   devise_for :users
- 
+
   #santo
   devise_scope :user do
     get '/users' => 'devise/registrations#new'
@@ -68,10 +68,10 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   #resources :tours
-  
+
   #santo
   namespace :admin do
-    
+
     root "application#index"
     #resources :users
     resources :tours, only: [:new, :create, :edit, :update, :destroy]
@@ -81,7 +81,7 @@ Rails.application.routes.draw do
         patch :archive
       end
     end
-    
+
   end
 
   #santo
@@ -109,6 +109,12 @@ Rails.application.routes.draw do
   # santo
   resources :tours do
     resources :reservations
+    #resources :comments
+  end
+
+  # santo
+  resources :tours, only: [] do
+    resources :comments, only: [:create]
   end
 
 end
