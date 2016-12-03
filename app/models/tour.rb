@@ -1,7 +1,7 @@
 class Tour < ActiveRecord::Base
   extend FriendlyId
-  validates :name, presence: true
-  validates :description, presence: true
+  validates :name, presence: true, length: { maximum: 70 }
+  validates :description, presence: true, length: { maximum: 1000 }
   validates :price, :numericality => true, :allow_nil => false
   has_many :roles, dependent: :delete_all
 
