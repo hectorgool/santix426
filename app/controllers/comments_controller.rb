@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
   private
 
   def set_tour
-    @tour = Tour.find(params[:tour_id])
+    @tour = Tour.friendly.find(params[:tour_id])
   end
 
   def comment_params

@@ -65,7 +65,7 @@ class ReservationsController < ApplicationController
     end
 
     def set_tour
-      @tour = Tour.find(params[:tour_id])
+      @tour = Tour.friendly.find(params[:tour_id])
     end
 
 end

@@ -1,4 +1,5 @@
 -- psql -f databases_santix426.sql
+
 DROP DATABASE IF EXISTS "santix426_development";
 DROP DATABASE IF EXISTS "santix426_test";
 DROP DATABASE IF EXISTS "santix426_production";

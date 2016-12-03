@@ -118,3 +118,10 @@ rails g controller profiles index show new create edit update destroy
 >>>>>>> f09ac1aad690c787482056da948d85c392d3e1bd
 
 
+rails g migration add_slug_to_tours slug:string
+
+
+rails g migration add_approved_to_tours approved:boolean
+
+user.inspect
+

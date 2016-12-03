@@ -73,7 +73,11 @@
   					Reservations
   				</h3>
 
-  				<%= render "reservations/form", tour: @tour, reservation: @reservation %>
+  				<% if user_signed_in? %>
+  					<%= render "reservations/form", tour: @tour, reservation: @reservation %>
+  				<% else %>
+  					<a class="btn btn-orange btn-lg btn-block" href="/users/sign_in" role="button">Make a Reservation</a>
+  				<% end %>
 
 				</div>
 			</div>
@@ -150,18 +154,17 @@
 				#react_component('CommentBox')
 			%>
 			<h3>
-				Comment
+				Comments
 			</h3>
 
-			<%=  render "comments/form", tour: @tour, comment: @comment %>
-			<hr>
+			<% if user_signed_in? %>
+				<%=  render "comments/form", tour: @tour, comment: @comment %>
+				<hr>
+			<% end %>
+
 			<div id="comments">
 				<% if @tour.comments.persisted.any? %>
 					<%= render @tour.comments.persisted %>
-				<% else %>
-					<p>
-						There are no comments for this tour.
-					</p>
 				<% end %>
 			</div>
 
