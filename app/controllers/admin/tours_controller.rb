@@ -47,7 +47,7 @@ class Admin::ToursController < Admin::ApplicationController
   private
 
     def set_tour
-      @tour = Tour.find(params[:id])
+      @tour = Tour.friendly.find(params[:id])
       rescue ActiveRecord::RecordNotFound
       flash[:alert] = "The tour you were looking for could not be found."
       redirect_to tours_path 

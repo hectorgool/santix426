@@ -421,7 +421,7 @@ DEPENDENCIES
   flux-rails-assets
   fog
   font-awesome-rails
-  friendly_id (~> 5.1)
+  friendly_id (~> 5.1.0)
   geocoder
   icalendar
   jbuilder (~> 2.0)

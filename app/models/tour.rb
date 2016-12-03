@@ -1,4 +1,5 @@
 class Tour < ActiveRecord::Base
+  extend FriendlyId
   validates :name, presence: true
   validates :description, presence: true
   validates :price, :numericality => true, :allow_nil => false
@@ -31,4 +32,7 @@ class Tour < ActiveRecord::Base
   #santo
   accepts_nested_attributes_for :comments, reject_if: :all_blank
 
+  # santo
+  friendly_id :name, use: :slugged
+  
 end
