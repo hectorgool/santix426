@@ -20,4 +20,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  new_tour: "New Tour"
+  i_want_to_be_a_tour_guide: "I want to be a tour guide"
+  description: "Description"
+  reservation: "Reservation"
+  comments: "Comments"
+  new_reservation: "New Reservation"
+  tours: "Tours"
+  users: "Users"
+  sign_in: "Sign in"
+  sign_up: "Sign up"
+  log_out: "Log out"
+  admin: "Admin"
+
+es:
+  new_tour: "Nuevo Tour"
+  i_want_to_be_a_tour_guide: "Quiero ser guia de turistas"
+  description: "Descripción"
+  reservation: "Reservación"
+  comments: "Comentarios"
+  new_reservation: "Nueva Reservación"
+  tours: "Tours"
+  users: "Usuarios"
+  sign_in: "Iniciar Sesión"
+  sign_up: "Regístro"
+  log_out: "Cerrar Sesión"
+  admin: "Administrador"
