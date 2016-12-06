@@ -32,6 +32,7 @@ en:
   sign_up: "Sign up"
   log_out: "Log out"
   admin: "Admin"
+  delete_warning: "Are you sure you want to delete this tour?"
 
 es:
   new_tour: "Nuevo Tour"
@@ -46,3 +47,4 @@ es:
   sign_up: "Regístro"
   log_out: "Cerrar Sesión"
   admin: "Administrador"
+  delete_warning: "¿Estas seguro de que quieres borrar el tour?"
