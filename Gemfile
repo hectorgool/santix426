@@ -72,10 +72,10 @@ gem 'carrierwave'
 gem 'fog'
 
 #santo
-gem 'bootstrap-datepicker-rails'
+#gem 'bootstrap-datepicker-rails'
 
 #santo
-gem 'momentjs-rails', '>= 2.9.0'
+#gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
 
 #santo
@@ -91,11 +91,15 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 
 # santo
-gem 'icalendar'
+#gem 'icalendar'
 
 # santo
 #gem "puma", group: :production
 gem 'puma', '~> 3.6', '>= 3.6.2'
+
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'fullcalendar-bootstrap-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

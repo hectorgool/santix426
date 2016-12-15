@@ -15,8 +15,8 @@
 //= require bootstrap-sprockets
 //= require leaflet
 //= require photoswipe
-//= require bootstrap-datepicker
 //= require moment
+//= require fullcalendar
 //= require bootstrap-datetimepicker
 //= require lodash
 //= require react
@@ -27,3 +27,8 @@
 //= require santo
 //= require_tree .
 
+$('#calendar').fullCalendar({});
+
+$(function () {
+  $('#id_field').datetimepicker();
+});

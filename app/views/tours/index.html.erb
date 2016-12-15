@@ -3,12 +3,12 @@
   <h1>
     Tours <small>by local</small>
     <p>
-      <a class="btn btn-orange btn-lg" href="#" role="button">
+      <a class="btn btn-info btn-lg" href="#" role="button">
         <%= t('i_want_to_be_a_tour_guide') %>
       </a>
     </p>
     <% admins_only do %>
-      <%= link_to new_admin_tour_url, :class => 'btn btn-orange btn-lg pull-right', :id => 'new-tour' do %>
+      <%= link_to new_admin_tour_url, :class => 'btn btn-info btn-lg pull-right', :id => 'new-tour' do %>
         <i class="glyphicon glyphicon-plus new-tour"></i> <%= t('new_tour') %>
       <% end %>
     <% end %>
@@ -21,14 +21,14 @@
 <% @tours.in_groups_of(3, false).each do |group| %>
   <div class="row">
     <% group.each do |tour| %>
-     
+
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <div class="panel panel-default">
 
           <% if user_signed_in? %>
             <% admins_only do %>
-              <div class="panel-body">   
-                <div class="pull-right">             
+              <div class="panel-body">
+                <div class="pull-right">
                   <%= link_to tour_url(tour.id), :class => "btn btn-default btn-lg" do %>
                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                   <% end %>
@@ -54,28 +54,11 @@
                     <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
                   <% end %>
                 <% end %>
-              <% end %>              
+              <% end %>
             <% end %>
           </div>
-          
+
           <div class="panel-body panel-height">
-            <p class="text-right">
-              <a class="btn btn-social-icon btn-lg btn-twitter">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <a class="btn btn-social-icon btn-lg btn-pinterest">
-                <i class="fa fa-pinterest"></i>
-              </a>
-              <a class="btn btn-social-icon btn-lg btn-facebook">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a class="btn btn-social-icon btn-lg btn-google">
-                <i class="fa fa-google-plus"></i>
-              </a>
-              <a class="btn btn-social-icon btn-lg btn-reddit">
-                <i class="fa fa-reddit"></i>
-              </a>  
-            </p>
             <p class="text-left">
               <h3>
                 <%= link_to tour.name, tour %>
@@ -91,7 +74,7 @@
               <p>
                 <span class="text-info">
                   <%= link_to profile_url(tour.user_id) do %>
-                    <%= tour.user.firstname %> <%= tour.user.lastname %> 
+                    <%= tour.user.firstname %> <%= tour.user.lastname %>
                   <% end %>
                 </span>
               </p>
@@ -100,15 +83,19 @@
               <%= sanitize(tour.description) %>
             </p>
           </div>
-          <!--
           <div class="panel-body">
+            <p class="text-right">
+              <%= render "layouts/social_buttons" %>
+            </p>
+            <!--
             <div class="pull-right">
               <span class="label label-info">Info 1</span>
               <span class="label label-info">Info 2</span>
               <span class="label label-info">Info 3</span>
-            </div>        
+            </div>
+            -->
           </div>
-          -->
+
         </div>
       </div>
 
@@ -118,9 +105,9 @@
 
 <div class="text-center">
   <nav aria-label="Page navigation">
-    <%= paginate @tours, 
+    <%= paginate @tours,
       :theme => 'twitter-bootstrap-3',
-      :pagination_class => "pagination-lg" 
+      :pagination_class => "pagination-lg"
     %>
   </nav>
 </div>
