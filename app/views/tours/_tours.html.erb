@@ -1,0 +1,98 @@
+
+<% @tours.in_groups_of(3, false).each do |group| %>
+  <div class="row">
+    <% group.each do |tour| %>
+     
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="panel panel-default">
+
+          <% if user_signed_in? %>
+            <% admins_only do %>
+              <div class="panel-body">   
+                <div class="pull-right">             
+                  <%= link_to tour_url(tour.id), :class => "btn btn-default btn-lg" do %>
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  <% end %>
+                  <%= link_to edit_admin_tour_path(tour.id), :class => "btn btn-default btn-lg" do %>
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                  <% end %>
+                  <%= link_to admin_tour_path(tour.id),
+                    method: :delete,
+                    data: { confirm: t('delete_warning') },
+                    class: "btn btn-default btn-lg" do %>
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+
+          <div class="panel-body_image">
+            <%= link_to tour do %>
+              <% if tour.attachments.any? %>
+                <% tour.attachments.each_with_index do |attachment, index| %>
+                  <% if index == 0 %>
+                    <%= image_tag attachment.file.url, class: 'img-responsive', alt: tour.name %>
+                  <% end %>
+                <% end %>
+              <% end %>              
+            <% end %>
+          </div>
+          
+          <div class="panel-body panel-height">
+            <p class="text-right">
+              <a class="btn btn-social-icon btn-lg btn-twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a class="btn btn-social-icon btn-lg btn-pinterest">
+                <i class="fa fa-pinterest"></i>
+              </a>
+              <a class="btn btn-social-icon btn-lg btn-facebook">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a class="btn btn-social-icon btn-lg btn-google">
+                <i class="fa fa-google-plus"></i>
+              </a>
+              <a class="btn btn-social-icon btn-lg btn-reddit">
+                <i class="fa fa-reddit"></i>
+              </a>  
+            </p>
+            <p class="text-left">
+              <h3>
+                <%= link_to tour.name, tour %>
+                <span class="pull-right">
+                  10 <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </span>
+              </h3>
+            </p>
+            <h4>
+              <p>
+                $<%= tour.price %> MNX
+              </p>
+              <p>
+                <span class="text-info">
+                  <%= link_to profile_url(tour.user_id) do %>
+                    <%= tour.user.firstname %> <%= tour.user.lastname %> 
+                  <% end %>
+                </span>
+              </p>
+            </h4>
+            <p class="text-left">
+              <%= sanitize(tour.description) %>
+            </p>
+          </div>
+          <!--
+          <div class="panel-body">
+            <div class="pull-right">
+              <span class="label label-info">Info 1</span>
+              <span class="label label-info">Info 2</span>
+              <span class="label label-info">Info 3</span>
+            </div>        
+          </div>
+          -->
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+<% end %>

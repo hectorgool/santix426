@@ -89,6 +89,7 @@ gem 'stripe'
 # santo
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'jquery-infinite-pages'
 
 # santo
 gem 'icalendar'

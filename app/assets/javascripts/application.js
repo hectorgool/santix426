@@ -26,4 +26,4 @@
 //= require eventemitter
 //= require santo
 //= require_tree .
-
+//= require jquery.infinite-pages
