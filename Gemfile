@@ -92,7 +92,7 @@ gem 'bootstrap-kaminari-views'
 gem 'jquery-infinite-pages'
 
 # santo
-#gem 'icalendar'
+gem "simple_calendar", "~> 2.0"
 
 # santo
 #gem "puma", group: :production

@@ -367,6 +367,8 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    simple_calendar (2.2.2)
+      rails (>= 3.0)
     simple_form (3.3.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -439,6 +441,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   selenium-webdriver (~> 3.0)
+  simple_calendar (~> 2.0)
   simple_form
   spring
   stripe

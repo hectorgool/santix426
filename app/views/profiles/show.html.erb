@@ -66,10 +66,13 @@
 			<h3>
 				<%= t('comments') %>
 			</h3>
+
+			<%= month_calendar do |date| %>
+			  <%= date.mday %>
+			<% end %>
 			
     </div>
   </div>
 </div>
 
 
-<div id="calendar"></div>
