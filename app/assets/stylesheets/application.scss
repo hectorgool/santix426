@@ -11,10 +11,9 @@
  * file per style scope.
  *= require leaflet
  *= require photoswipe
- *= require bootstrap-datepicker3
  *= require bootstrap-datetimepicker
  */
- 
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";

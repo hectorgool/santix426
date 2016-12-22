@@ -72,10 +72,10 @@ gem 'carrierwave'
 gem 'fog'
 
 #santo
-gem 'bootstrap-datepicker-rails'
+#gem 'bootstrap-datepicker-rails'
 
 #santo
-gem 'momentjs-rails', '>= 2.9.0'
+#gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
 
 #santo
@@ -92,7 +92,7 @@ gem 'bootstrap-kaminari-views'
 gem 'jquery-infinite-pages'
 
 # santo
-gem 'icalendar'
+#gem 'icalendar'
 
 # santo
 #gem "puma", group: :production
