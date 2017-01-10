@@ -18,15 +18,16 @@
 
 	<div class="container-fluid">
 
-		<p class="notice">
+		<!--
+		<div class="notice">
 			<%= 
 				#notice 
 			%>
-		</p>
+		</div>
 
-	  <p class="alert">
+	  <div class="alert">
 	    <%= alert %>
-	  </p>
+	  </div>
 
 		<% flash.each do |key, message| %>
 			<div class="alert alert-<%= key %>">
@@ -35,6 +36,7 @@
 				%>
 			</div>
 		<% end %>
+		-->
 
 		<%= yield %>
 	</div>

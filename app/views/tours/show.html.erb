@@ -1,8 +1,9 @@
 <% title(@tour.name, "Tours") %>
 
 <div class="col-md-12">
-	<%= react_component('SearchBox') %>
-	<br />
+	<p>
+		<%= react_component('SearchBox') %>
+	</p>
 </div>
 
 <% if user_signed_in? %>
