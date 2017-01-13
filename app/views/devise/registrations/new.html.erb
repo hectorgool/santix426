@@ -8,11 +8,11 @@
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <!--<%= devise_error_messages! %>-->
 
-        <%= f.input :firstname, autofocus: true %>
+        <%= f.input :firstname, label: 'Firstname', placeholder: 'Ej: Rodolfo' %>
 
-        <%= f.input :lastname %>
+        <%= f.input :lastname, label: 'Lastname', placeholder: 'Ej: Guzman Huerta' %>
 
-        <%= f.input :email %>
+        <%= f.input :email, label: 'Email', placeholder: 'santo@santo.com' %>
 
         <%= f.input :password, autocomplete: "off" %>
 

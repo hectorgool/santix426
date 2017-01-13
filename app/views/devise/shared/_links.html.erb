@@ -1,14 +1,14 @@
 <hr>
 <%- if controller_name != 'sessions' %>
 	<p>
-		Already have an account?
+		<%= t('already_have_an_account') %>
 	</p>
   <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-default btn-lg btn-block" %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
 	<p>
-		Don't have an account?
+		<%= t('dont_have_an_account') %>
 	</p>
   <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-default btn-lg btn-block" %><br />
 <% end -%>
