@@ -117,4 +117,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
 
+  # santo
+  resources :tours, :path => "adventures"
+
 end
