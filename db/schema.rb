@@ -11,37 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222160757) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20161203013625) do
 
   create_table "attachments", force: :cascade do |t|
-    t.string   "file"
-    t.integer  "tour_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "file",       limit: 255
+    t.integer  "tour_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "attachments", ["tour_id"], name: "index_attachments_on_tour_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
-    t.text     "text"
-    t.integer  "tour_id"
-    t.integer  "user_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.boolean  "approved",   default: true
+    t.text     "text",       limit: 65535
+    t.integer  "tour_id",    limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.boolean  "approved",                 default: true
   end
 
   add_index "comments", ["tour_id"], name: "index_comments_on_tour_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",                      null: false
-    t.integer  "sluggable_id",              null: false
+    t.string   "slug",           limit: 255, null: false
+    t.integer  "sluggable_id",   limit: 4,   null: false
     t.string   "sluggable_type", limit: 50
-    t.string   "scope"
+    t.string   "scope",          limit: 255
     t.datetime "created_at"
   end
 
@@ -50,70 +47,62 @@ ActiveRecord::Schema.define(version: 20161222160757) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "meetings", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "reservations", force: :cascade do |t|
-    t.integer  "customers"
+    t.integer  "customers",  limit: 4
     t.date     "date"
     t.time     "time"
-    t.integer  "tour_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "tour_id",    limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   add_index "reservations", ["tour_id"], name: "index_reservations_on_tour_id", using: :btree
   add_index "reservations", ["user_id"], name: "index_reservations_on_user_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "role"
-    t.integer  "tour_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",    limit: 4
+    t.string   "role",       limit: 255
+    t.integer  "tour_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "roles", ["tour_id"], name: "index_roles_on_tour_id", using: :btree
   add_index "roles", ["user_id"], name: "index_roles_on_user_id", using: :btree
 
   create_table "tours", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
-    t.decimal  "price"
-    t.decimal  "latitude",    precision: 10, scale: 6
-    t.decimal  "longitude",   precision: 10, scale: 6
-    t.integer  "user_id"
-    t.string   "slug"
-    t.boolean  "approved",                             default: false
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                                                         null: false
+    t.datetime "updated_at",                                                         null: false
+    t.decimal  "price",                     precision: 10
+    t.decimal  "latitude",                  precision: 10, scale: 6
+    t.decimal  "longitude",                 precision: 10, scale: 6
+    t.integer  "user_id",     limit: 4
+    t.string   "slug",        limit: 255
+    t.boolean  "approved",                                           default: false
   end
 
   add_index "tours", ["slug"], name: "index_tours_on_slug", using: :btree
   add_index "tours", ["user_id"], name: "index_tours_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "",    null: false
-    t.string   "encrypted_password",     default: "",    null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "",    null: false
+    t.string   "encrypted_password",     limit: 255, default: "",    null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.string   "firstname"
-    t.string   "lastname"
-    t.boolean  "admin",                  default: false
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.string   "firstname",              limit: 255
+    t.string   "lastname",               limit: 255
+    t.boolean  "admin",                              default: false
     t.datetime "archived_at"
   end
 

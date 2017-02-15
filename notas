@@ -125,3 +125,9 @@ rails g migration add_approved_to_tours approved:boolean
 
 user.inspect
 
+rails _4.2.6_ new tmp426 -d mysql
+
+ 2033  bundle exec rake db:reset
+ 2034  bundle exec rake db:seed
+ 2035  bundle exec rake db:migrate RAILS_ENV=development
+ 2036  bundle exec rake db:migrate RAILS_ENV=test

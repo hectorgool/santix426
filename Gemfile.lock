@@ -277,12 +277,12 @@ GEM
     momentjs-rails (2.15.1)
       railties (>= 3.1)
     multi_json (1.12.1)
+    mysql2 (0.4.5)
     netrc (0.11.0)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
-    pg (0.19.0)
     photoswipe-rails (4.1.1)
     pkg-config (1.1.7)
     puma (3.6.2)
@@ -431,7 +431,7 @@ DEPENDENCIES
   kaminari
   leaflet-rails (~> 0.7.7)
   lodash-rails
-  pg (~> 0.15)
+  mysql2 (>= 0.3.13, < 0.5)
   photoswipe-rails (~> 4.1, >= 4.1.1)
   puma (~> 3.6, >= 3.6.2)
   pundit (~> 1.1)

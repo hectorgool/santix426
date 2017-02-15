@@ -1,24 +1,15 @@
--- psql -f databases_santix426.sql
+-- mysql -u root -v < databases_santix426.sql
 
-DROP DATABASE IF EXISTS "santix426_development";
-DROP DATABASE IF EXISTS "santix426_test";
-DROP DATABASE IF EXISTS "santix426_production";
+DROP DATABASE IF EXISTS santix426_development;
+CREATE DATABASE santix426_development CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-CREATE DATABASE "santix426_development" WITH ENCODING 'UTF8';
-CREATE DATABASE "santix426_test" WITH ENCODING 'UTF8';
-CREATE DATABASE "santix426_production" WITH ENCODING 'UTF8';
+DROP DATABASE IF EXISTS `santix426_test`;
+CREATE DATABASE santix426_test CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-DROP USER "santo";
-CREATE USER "santo" WITH PASSWORD 'asdfasdf';
-ALTER USER "santo" WITH SUPERUSER;
+DROP DATABASE IF EXISTS `santix426_production`;
+CREATE DATABASE santix426_production CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-GRANT ALL PRIVILEGES ON DATABASE "santix426_development" TO santo;
-GRANT ALL PRIVILEGES ON DATABASE "santix426_test" TO santo;
-GRANT ALL PRIVILEGES ON DATABASE "santix426_production" TO santo;
+DROP USER 'santo'@'localhost';
+GRANT ALL PRIVILEGES ON *.* to santo@localhost identified by 'asdfasdf' WITH GRANT option;
 
-ALTER DATABASE "santix426_development" OWNER TO santo;
-ALTER DATABASE "santix426_test" OWNER TO santo;
-ALTER DATABASE "santix426_production" OWNER TO santo;
-
-ALTER USER santo CREATEDB;
-
+GRANT ALL PRIVILEGES ON *.* to hector@localhost identified by 'asdfasdf' WITH GRANT option;
